@@ -1,0 +1,22 @@
+:root{
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color:#333;
+    --border-color:#dbdbdb;
+    --star-gold-color:#FFCE3D;
+    --hover-background: rgba(196, 182, 156,0.7);
+    --hover-color: rgba(99, 96, 96, 0.7);
+    --heading-color: #000000;
+    
+    --header-height: 80px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'PT Sans';
+    font-style: normal;
+    box-sizing: border-box;
+}
