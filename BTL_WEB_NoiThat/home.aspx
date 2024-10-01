@@ -183,7 +183,7 @@
                                         <div class="row">
                                             <div class="col l-6">
                                                 <a href="#" class="other__product-relate ">
-                                                    <img src="./assets/img/no1kitchen.png" alt="product__special" class="other__product-img">
+                                                    <img src="./assets/img/no1kitchen.png" alt="product__special" class="other__product-img"/>
                                                     <div>
                                                         <span class="product__other-info-name">Special Wood Full</span>
                                                         <div class="product__special__rating">
@@ -200,7 +200,7 @@
                                             </div>
                                             <div class="col l-6">
                                                 <a href="#" class="other__product-relate">
-                                                    <img src="./assets/img/a12workspace.png" alt="product__special" class="other__product-img">
+                                                    <img src="./assets/img/a12workspace.png" alt="product__special" class="other__product-img"/>
                                                     <div>
                                                         <span class="product__other-info-name">Special Wood Full</span>
                                                         <div class="product__special__rating">
@@ -310,19 +310,19 @@
                         <h3 class="footer__heading">About Us</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Visit our Store</a>
+                                <a href="#" class="footer-item__link">Visit our Store</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">About Us</a>
+                                <a href="#" class="footer-item__link">About Us</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Our Blog</a>
+                                <a href="#" class="footer-item__link">Our Blog</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Craftmanship</a>
+                                <a href="#" class="footer-item__link">Craftmanship</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Apply For a Job</a>
+                                <a href="#" class="footer-item__link">Apply For a Job</a>
                             </li>
                         </ul>
                     </div>
@@ -330,19 +330,19 @@
                         <h3 class="footer__heading">Shopping</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Online Payment</a>
+                                <a href="#" class="footer-item__link">Online Payment</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Gift Cards</a>
+                                <a href="#" class="footer-item__link">Gift Cards</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Return Policy</a>
+                                <a href="#" class="footer-item__link">Return Policy</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Furniture Asembling</a>
+                                <a href="#" class="footer-item__link">Furniture Asembling</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Shipping Methods</a>
+                                <a href="#" class="footer-item__link">Shipping Methods</a>
                             </li>
                         </ul>
                     </div>
@@ -350,19 +350,19 @@
                         <h3 class="footer__heading">Latest News</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">The Essentials Design Tip</a>
+                                <a href="#" class="footer-item__link">The Essentials Design Tip</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Function WTW Shelves</a>
+                                <a href="#" class="footer-item__link">Function WTW Shelves</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">9 Unique Ways to Display on TV</a>
+                                <a href="#" class="footer-item__link">9 Unique Ways to Display on TV</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Minimal Design</a>
+                                <a href="#" class="footer-item__link">Minimal Design</a>
                             </li>
                             <li class="footer-item">
-                                <a href="" class="footer-item__link">Make a Huge Impact</a>
+                                <a href="#" class="footer-item__link">Make a Huge Impact</a>
                             </li>
                         </ul>
                     </div>
