@@ -2138,6 +2138,7 @@
     <Content Include="assets\img\img5.png" />
     <Content Include="assets\img\img6.png" />
     <Content Include="assets\img\logoTN-01 1.png" />
+    <Content Include="assets\img\menu.png" />
     <Content Include="assets\img\no1kitchen.png" />
     <Content Include="assets\img\pay.png" />
     <Content Include="assets\img\polycy.png" />
@@ -2145,6 +2146,7 @@
     <Content Include="assets\img\special_product.png" />
     <Content Include="assets\img\Subnewproduct.png" />
     <Content Include="assets\img\support.png" />
+    <Content Include="assets\js\home.js" />
     <Content Include="home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

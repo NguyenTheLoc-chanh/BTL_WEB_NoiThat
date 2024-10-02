@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Home</title>
 
     <link rel="stylesheet" href="./assets/css/home.css"/>
@@ -21,7 +22,7 @@
                     <div class="header__logo">
                         <a href="#"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
                     </div>
-                    <div class="header__nav">
+                    <div class="header__nav header__nav-mobile">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-item-link">Home</a>
@@ -38,6 +39,12 @@
                         </ul>
                     </div>
                     <div class="header__nav">
+                        <!-- <div class="header__search">
+                            <input type="text" name="search" id="search" placeholder="Nhập để tìm kiếm">
+                            <a href="#" class="header__navbar-item-link header__search-link">
+                                <i class="header__search-btn-icon fas fa-search"></i>
+                            </a>
+                        </div> -->
                         <ul class="header__nav-list">
                             <li class="header__navbar-item">
                                 <a href="#" class="header__navbar-item-link">
@@ -49,6 +56,7 @@
                                 <span class="header__navbar-user-name">Nguyễn Thế Lộc</span>
                             </li>
                         </ul>
+                        <img src="./assets/img/menu.png" alt="Menu" class="menu__mobile"/>
                     </div>
                 </div>
             </div>
@@ -69,12 +77,12 @@
                 </div>
                 <div class="row catergory">
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <h3 class="catergory_heading">Explore by Catergoty</h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col l-4">
+                        <div class="col l-4 c-12">
                             <a href="#" class="catergory__search-link">
                                 <i class="catergory__search-icon fas fa-search"></i>
                             </a>
@@ -93,27 +101,31 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col l-8">
+                        <div class="col l-8 c-12">
                             <div class="row">
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img1.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img2.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img3.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img4.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img5.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
-                                <div class="catergory__illus col l-6">
+                                <div class="catergory__illus col l-6 c-12">
                                     <img src="./assets/img/img6.png" alt="Nội thất" class="catergory__img"/>
                                 </div>
                             </div>
+                        </div>
+                        <div class="catergory__btn-mobile col c-12">
+                            <button class="catergory__btn">View all Category</button>
+                            <i class="category__btn-mobile-icon fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -121,16 +133,40 @@
             <div class="product__special">
                 <div class="grid wide">
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <h3 class="product__special-heading">Special Product</h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col l-6">
+                        <div class="col l-6 c-12">
                             <a href="#" class="product__special-item">
-                                <img src="./assets/img/special_product.png" alt="product__special" class="product__special-img"/>
+                                <div class="product__special-mobile">
+                                    <img src="./assets/img/special_product.png" alt="product__special" class="product__special-img"/>
+                                    <div class="product__special-mobile-group">
+                                        <div class="product__special-info-mobile">
+                                            <span class="product__special-info-name">Special Wood Full</span>
+                                            <div class="product__special__rating">
+                                                <span class="product__special__rating-number">3.7</span>
+                                                <i class="product__special__star--gold fas fa-star"></i>
+                                                <i class="product__special__star--gold fas fa-star"></i>
+                                                <i class="product__special__star--gold fas fa-star"></i>
+                                                <i class="product__special__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="product__special-price">$123.23</span>
+                                        </div>
+                                        <div class="product__special-desc-mobile">
+                                            <h3 class="product__special-desc-mobile">Description</h3>
+                                            <p class="product__special-detail-mobile">A wooden dining set comprises a table and chairs crafted from wood, adding a warm touch to living or working spaces. With diverse designs ranging from modern to classic, these sets combine the natural beauty and durability of wood, enhancing both aesthetics and functionality..</p>
+                                            <div class="product__special-seemore-mobile">
+                                                See more
+                                                <i class="product__special-seemore-icon-mobile fas fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
                                 <div class="product__special-info">
-                                    <div>
+                                    <div class="product__special-info-pc">
                                         <span class="product__special-info-name">Special Wood Full</span>
                                         <div class="product__special__rating">
                                             <span class="product__special__rating-number">3.7</span>
@@ -151,9 +187,9 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col l-6">
+                        <div class="col l-6 c-12">
                             <div class="row">
-                                <div class="col l-12">
+                                <div class="col l-12 c-12">
                                     <h3 class="product__special-desc">Description</h3>
                                     <p class="product__special-detail">A wooden dining set comprises a table and chairs crafted from wood, adding a warm touch to living or working spaces. With diverse designs ranging from modern to classic, these sets combine the natural beauty and durability of wood, enhancing both aesthetics and functionality..</p>
                                     <div class="product__special-seemore">
@@ -161,7 +197,7 @@
                                         <i class="product__special-seemore-icon fas fa-angle-down"></i>
                                     </div>
                                 </div>
-                                <div class="col l-12">
+                                <div class="col l-12 c-12">
                                     <div class="other__product">
                                         <div class="other__product-lable">
                                             <h3 class="other__product-heading">Other product</h3>
@@ -175,7 +211,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col l-6">
+                                            <div class="col l-6 c-12">
                                                 <a href="#" class="other__product-relate ">
                                                     <img src="./assets/img/no1kitchen.png" alt="product__special" class="other__product-img"/>
                                                     <div>
@@ -192,7 +228,7 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col l-6">
+                                            <div class="col l-6 c-12">
                                                 <a href="#" class="other__product-relate">
                                                     <img src="./assets/img/a12workspace.png" alt="product__special" class="other__product-img"/>
                                                     <div>
@@ -220,14 +256,14 @@
             <div class="getBetter">
                 <div class="grid wide">
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <div class="better__container">
                                 <div class="better__container-img">
                                     <img src="./assets/img/better.png" alt="Ảnh" class="better-img"/>
                                     <img src="./assets/img/better1.png" alt="Ảnh" class="better-img"/>
                                 </div>
                                 <div class="better__container-link">
-                                    <h3 class="better__link-heading">Get better<br/>for your home</h3>
+                                    <h3 class="better__link-heading">Get better <br/>for your home</h3>
                                     <a href="#" class="better__link-getnow">Get it now?</a>
                                     <img src="./assets/img/better__ghe.png" alt="Ảnh ghế" class="better__link-img"/>
                                 </div>
@@ -239,12 +275,12 @@
             <div class="benefit">
                 <div class="grid wide">
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <h3 class="benefit__heading">Benefit for you</h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <div class="benefit__container">
                                 <div class="benefit-pay">
                                     <span class="benifit-pay-img">
@@ -276,7 +312,7 @@
             <div class="SubNewProduct">
                 <div class="grid wide">
                     <div class="row">
-                        <div class="col l-12">
+                        <div class="col l-12 c-12">
                             <div class="subnew">
                                 <div>
                                     <img src="./assets/img/Subnewproduct.png" alt="New Product" class="subnew-img"/>
@@ -300,7 +336,7 @@
         <footer class="footer">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-3">
+                    <div class="col l-3 c-12">
                         <h3 class="footer__heading">About Us</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -320,7 +356,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-3">
+                    <div class="col l-3 c-12">
                         <h3 class="footer__heading">Shopping</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -340,7 +376,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-3">
+                    <div class="col l-3 c-12">
                         <h3 class="footer__heading">Latest News</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -360,13 +396,13 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-3">
+                    <div class="col l-3 c-12">
                         <h3 class="footer__heading">Subscribe</h3>
                         <p class="footer-item__p">Signup for our newsletter to get the latest new collections and product launches.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col l-12">
+                    <div class="col l-12 c-12">
                         <div class="footer__social">
                             <p class="footer__info">© Copyright 2023 - TN Interior Design </p>
                             <ul class="footer__list-social">
@@ -395,6 +431,7 @@
             </div>
         </footer>
     </div>
+    <script src="./assets/js/home.js"></script>
     </form>
 </body>
 </html>
