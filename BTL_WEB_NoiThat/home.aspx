@@ -38,12 +38,6 @@
                         </ul>
                     </div>
                     <div class="header__nav">
-                        <div class="header__search">
-                            <input type="text" name="search" id="search" placeholder="Nhập để tìm kiếm"/>
-                            <a href="#" class="header__navbar-item-link header__search-link">
-                                <i class="header__search-btn-icon fas fa-search"></i>
-                            </a>
-                        </div>
                         <ul class="header__nav-list">
                             <li class="header__navbar-item">
                                 <a href="#" class="header__navbar-item-link">
