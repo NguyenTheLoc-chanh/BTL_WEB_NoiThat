@@ -56,3 +56,15 @@ registerForm.addEventListener("click", function (e) {
     formLogin.classList.remove("active");
     formRegister.classList.add("active");
 })
+
+// Đăng nhập trên mobile
+const loginMobile = document.querySelector(".header__login-mobile");
+
+loginMobile.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.classList.add("active");
+    if (formRegister.classList.contains("active")) {
+        formRegister.classList.remove("active");
+    }
+    formLogin.classList.add("active");
+})
