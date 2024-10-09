@@ -70,6 +70,7 @@
     <Content Include="assets\css\base.css" />
     <Content Include="assets\css\grid.css" />
     <Content Include="assets\css\home.css" />
+    <Content Include="assets\css\login.css" />
     <Content Include="assets\css\responsive.css" />
     <Content Include="assets\font\fontawesome-free-6.4.0\css\all.css" />
     <Content Include="assets\font\fontawesome-free-6.4.0\css\all.min.css" />
