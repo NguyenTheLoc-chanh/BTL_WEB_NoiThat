@@ -16,7 +16,8 @@
     box-sizing: inherit;
 }
 
-html{
+html {
+    scroll-behavior: smooth;
     font-family: 'PT Sans';
     font-style: normal;
     box-sizing: border-box;
