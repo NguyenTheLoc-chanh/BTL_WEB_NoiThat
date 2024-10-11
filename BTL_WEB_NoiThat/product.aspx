@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Product</title>
-    <link rel="stylesheet" href="./assets/css/home.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/product.css"/>
     <link rel="stylesheet" href="./assets/css/base.css"/>
     <link rel="stylesheet" href="./assets/css/grid.css"/>
     <link rel="stylesheet" href="./assets/css/responsive.css"/>
@@ -82,11 +83,30 @@
             <hr />
             <div class="list_product">
                 <ul>
-                    <li><a href="#">
-                        <div class="product_img">
-                            <img src="../assets/product-img/" alt="product image" />
+                    <li>
+                        <div class="col l-6">
+                            <a href="#" class="item">
+                                <img src="./assets/product-img/product1.jpg" alt="product__special" class="item-img"/>
+                                <div>
+                                    <span class="product__info-name">B013 Bathroom full 2023</span>
+                                    <div class="product__special__rating">
+                                        <span>3 options</span>
+                                        <span class="product__special__rating-number">3.7</span>
+                                        <i class="product__special__star--gold fas fa-star"></i>
+                                        <i class="product__special__star--gold fas fa-star"></i>
+                                        <i class="product__special__star--gold fas fa-star"></i>
+                                        <i class="product__special__star--gold fas fa-star"></i>
+                                        <i class="product__special__star--gold fas fa-star"></i>
+                                    </div>
+                                    <span class="product__price">$123.23</span>
+                                    <div>
+                                        <i class="fa-sharp-duotone fa-solid fa-cart-plus"></i>
+                                        <i class="fa-duotone fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        </a></li>
+                    </li>
                 </ul>
             </div>
         </div>
