@@ -20,13 +20,13 @@
             <div class="grid wide">
                 <div class="header__navbar">
                     <div class="header__logo">
-                        <a href="#"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
+                        <a href="home.aspx"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
                     </div>
                     <span class="header__login-mobile">Đăng nhập</span>
                     <div class="header__nav header__nav-mobile">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-item-link">Home</a>
+                                <a href="home.aspx" class="header__nav-item-link">Home</a>
                             </li>
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-item-link">Product</a>
@@ -47,8 +47,8 @@
                             </a>
                         </div> -->
                         <ul class="header__nav-list">
-                            <li class="header__navbar-item">
-                                <a href="#" class="header__navbar-item-link">
+                            <li class="header__navbar-item header__navbar-cart">
+                                <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
                                     <span class="header__cart-notice">3</span>
                                 </a>
@@ -56,8 +56,8 @@
                             <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
                                 <span class="header__navbar-user-name active-login">Nguyễn Thế Lộc</span>
-                                <span class="header__navbar-user-name login">Đăng nhập</span>
-                                <span class="header__navbar-user-name register">Đăng ký</span>
+                                <span class="header__navbar-user-name login">Login</span>
+                                <span class="header__navbar-user-name register">Register</span>
                             </li>
                         </ul>
                         <img src="./assets/img/menu.png" alt="Menu" class="menu__mobile"/>

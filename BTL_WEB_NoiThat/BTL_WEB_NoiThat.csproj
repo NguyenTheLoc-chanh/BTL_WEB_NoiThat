@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\base.css" />
+    <Content Include="assets\css\cart.css" />
+    <Content Include="assets\css\detail.css" />
     <Content Include="assets\css\grid.css" />
     <Content Include="assets\css\home.css" />
     <Content Include="assets\css\login.css" />
@@ -2132,6 +2134,9 @@
     <Content Include="assets\img\better.png" />
     <Content Include="assets\img\better1.png" />
     <Content Include="assets\img\better__ghe.png" />
+    <Content Include="assets\img\cart1.jfif" />
+    <Content Include="assets\img\detail1.jpg" />
+    <Content Include="assets\img\detail2.jpg" />
     <Content Include="assets\img\img1.png" />
     <Content Include="assets\img\img2.png" />
     <Content Include="assets\img\img3.png" />
@@ -2148,10 +2153,19 @@
     <Content Include="assets\img\Subnewproduct.png" />
     <Content Include="assets\img\support.png" />
     <Content Include="assets\js\home.js" />
+    <Content Include="detail.aspx" />
     <Content Include="home.aspx" />
+    <Content Include="shoppingcart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2160,6 +2174,13 @@
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shoppingcart.aspx.cs">
+      <DependentUpon>shoppingcart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shoppingcart.aspx.designer.cs">
+      <DependentUpon>shoppingcart.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\font\fontawesome-free-6.4.0\less\brands.less" />
