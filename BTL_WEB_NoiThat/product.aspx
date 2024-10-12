@@ -82,32 +82,166 @@
             </div>
             <hr />
             <div class="list_product">
-                <ul>
-                    <li>
-                        <div class="col l-6">
-                            <a href="#" class="item">
-                                <img src="./assets/product-img/product1.jpg" alt="product__special" class="item-img"/>
-                                <div>
-                                    <span class="product__info-name">B013 Bathroom full 2023</span>
-                                    <div class="product__special__rating">
-                                        <span>3 options</span>
-                                        <span class="product__special__rating-number">3.7</span>
-                                        <i class="product__special__star--gold fas fa-star"></i>
-                                        <i class="product__special__star--gold fas fa-star"></i>
-                                        <i class="product__special__star--gold fas fa-star"></i>
-                                        <i class="product__special__star--gold fas fa-star"></i>
-                                        <i class="product__special__star--gold fas fa-star"></i>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
                                     </div>
-                                    <span class="product__price">$123.23</span>
-                                    <div>
-                                        <i class="fa-sharp-duotone fa-solid fa-cart-plus"></i>
-                                        <i class="fa-duotone fa-solid fa-heart"></i>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </li>
-                </ul>
+                         <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col c-4">
+                            <div class="card">
+                                <img src="./assets/product-img/product1.jpg" alt="Bathroom Design" />
+                                <div class="card-content">
+                                    <h2>B013 Bathroom full 2023</h2>
+                                    <div class="options-rating">
+                                        <span class="options">3 options</span>
+                                        <div class="rating">
+                                            <span>3.7</span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>$674</span>
+                                    </div>
+                                    <div class="icons">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
