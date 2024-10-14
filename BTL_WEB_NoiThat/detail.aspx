@@ -15,55 +15,61 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="header">
-      <div class="grid wide">
-          <div class="header__navbar">
-              <div class="header__logo">
-                  <a href="#"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
-              </div>
-              <span class="header__login-mobile">Đăng nhập</span>
-              <div class="header__nav header__nav-mobile">
-                  <ul class="header__nav-list">
-                      <li class="header__nav-item">
-                          <a href="#" class="header__nav-item-link">Home</a>
-                      </li>
-                      <li class="header__nav-item">
-                          <a href="#" class="header__nav-item-link">Product</a>
-                      </li>
-                      <li class="header__nav-item">
-                          <a href="#" class="header__nav-item-link">About</a>
-                      </li>
-                      <li class="header__nav-item">
-                          <a href="#" class="header__nav-item-link">Contact</a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="header__nav">
-                  <!-- <div class="header__search">
-                      <input type="text" name="search" id="search" placeholder="Nhập để tìm kiếm">
-                      <a href="#" class="header__navbar-item-link header__search-link">
-                          <i class="header__search-btn-icon fas fa-search"></i>
-                      </a>
-                  </div> -->
-                  <ul class="header__nav-list">
-                      <li class="header__navbar-item header__navbar-cart">
-                          <a href="#" class="header__navbar-item-link">
-                              <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                              <span class="header__cart-notice">3</span>
-                          </a>
-                      </li>
-                      <li class="header__navbar-item header__navbar-user">
-                          <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
-                          <span class="header__navbar-user-name active-login">Nguyễn Thế Lộc</span>
-                          <span class="header__navbar-user-name login">Đăng nhập</span>
-                          <span class="header__navbar-user-name register">Đăng ký</span>
-                      </li>
-                  </ul>
-                  <img src="./assets/img/menu.png" alt="Menu" class="menu__mobile"/>
-              </div>
-          </div>
-      </div>
-  </header>
+      <header class="header">
+            <div class="grid wide">
+                <div class="header__navbar">
+                    <div class="header__logo">
+                        <a href="home.aspx"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
+                    </div>
+                    <a class="header__login-mobile" href="LoginPage.aspx">Đăng nhập</a>
+                    <div class="header__nav header__nav-mobile">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="home.aspx" class="header__nav-item-link">Home</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="product.aspx" class="header__nav-item-link">Product</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-item-link">About</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__nav">
+                        <!-- <div class="header__search">
+                            <input type="text" name="search" id="search" placeholder="Nhập để tìm kiếm">
+                            <a href="#" class="header__navbar-item-link header__search-link">
+                                <i class="header__search-btn-icon fas fa-search"></i>
+                            </a>
+                        </div> -->
+                        <ul class="header__nav-list">
+                            <li class="header__navbar-item header__navbar-cart">
+                                <a href="shoppingcart.aspx" class="header__navbar-item-link">
+                                    <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
+                                    <span class="header__cart-notice">3</span>
+                                </a>
+                            </li>
+                            <li class="header__navbar-item header__navbar-user">
+                                <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
+                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server">
+                                    
+                                </span>
+                                <span runat="server" id="spanLogin">
+                                    <a href="LoginPage.aspx" class="header__navbar-user-name login">Login</a>
+                                </span>
+                                <span runat="server" id="spanRegister">
+                                      <a href="Register.aspx" class="header__navbar-user-name register">Register</a>
+                                </span>
+                            </li>
+                        </ul>
+                        <img src="./assets/img/menu.png" alt="Menu" class="menu__mobile"/>
+                    </div>
+                </div>
+            </div>
+        </header>
   <div class="details">
       <div class="grid wide">
         <div class="row">
@@ -217,106 +223,6 @@
         </div>
     </div>
 </footer>
-<div class="modal">
-  <div class="modal__overlay">
-
-  </div>
-  <div class="modal__body">
-          <!--Register form-->
-          <div class="auth-form-register">
-              <div class="auth-form__container">
-                  <div class="auth-form__header">
-                      <h3 class="auth-form__heading">Đăng ký</h3>
-                      <span class="auth-form__switch-btn">Đăng nhập</span>
-            
-                  </div>
-                  <div class="auth-form__form">
-                      <div class="auth-form__group">
-                              <input type="text" class="auth-form__input" placeholder="Nhập Email & số điện thoại"/>
-                      </div>
-                      <div class="auth-form__group">
-                          <input type="password" class="auth-form__input" placeholder="Mật khẩu"/>
-                      </div>    
-                      <div class="auth-form__group">
-                          <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu"/>
-                      </div> 
-                  </div>
-
-                  <div class="auth-form__aside">
-                      <p class="auth-form__polivy-text">
-                          Bằng việc đăng kí, bạn đã đồng ý với TN về
-                          <a href="#" class="auth-form__text-link">Điều khoản dịch vụ </a>&
-                          <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
-                      </p>
-                  </div>
-                  <div class="auth-form__controls">
-                      <button class="btn auth-form__controls-back btn--normal">Trở lại</button>
-                      <button class="btn btn--primary">ĐĂNG KÝ</button>
-                  </div>
-              </div>
-              <div class="auth-form__socials">
-                  <a href="#" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                      <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                      <span class="auth-form__socials-title">
-                          Kết nối với Facebook
-                      </span>
-                  </a>
-                  <a href="#" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                      <i class="auth-form__socials-icon fab fa-google"></i>
-                      <span class="auth-form__socials-title">
-                          Kết nối với Google
-                      </span>
-                  </a>
-              </div>
-          </div>
-
-          <!--Login form-->
-          <div class="auth-form-login">
-              <div class="auth-form__container">
-                  <div class="auth-form__header">
-                      <h3 class="auth-form__heading">Đăng nhập</h3>
-                      <span class="auth-form__switch-btn registerForm">Đăng kí</span>
-            
-                  </div>
-                  <div class="auth-form__form">
-                      <div class="auth-form__group">
-                              <input type="text" class="auth-form__input" placeholder="Nhập Email"/>
-                      </div>
-                      <div class="auth-form__group">
-                          <input type="password" class="auth-form__input" placeholder="Mật khẩu"/>
-                      </div>    
-                  </div>
-
-                  <div class="auth-form__aside">
-                      <div class="auth-form__help">
-                          <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
-                          <span class="auth-form__help-separate"></span>
-                          <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
-                      </div>
-                  </div>
-
-                  <div class="auth-form__controls">
-                      <button class="btn auth-form__controls-back">Trở lại</button>
-                      <button class="btn">ĐĂNG NHẬP</button>
-                  </div>
-              </div>
-              <div class="auth-form__socials">
-                  <a href="#" class="auth-form__socials--facebook btn">
-                      <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                      <span class="auth-form__socials-title">
-                          Kết nối với Facebook
-                      </span>
-                  </a>
-                  <a href="#" class="auth-form__socials--google btn">
-                      <i class="auth-form__socials-icon fab fa-google"></i>
-                      <span class="auth-form__socials-title">
-                          Kết nối với Google
-                      </span>
-                  </a>
-              </div>
-          </div>
-  </div>
-</div>
 <script src="./assets/js/home.js"></script>
     </form>
 </body>

@@ -141,6 +141,7 @@
 .header__navbar-user-name {
     margin-left: 4px;
     color: var(--text-color);
+    text-decoration: none;
 }
 
     .header__navbar-user-name.login {

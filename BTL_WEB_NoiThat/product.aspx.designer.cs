@@ -11,7 +11,7 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class shoppingcart
+    public partial class product
     {
 
         /// <summary>
