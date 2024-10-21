@@ -21,10 +21,9 @@ namespace BTL_WEB_NoiThat
             string sUserNameLogin = emailOrPhoneLogin.Value.Trim();
             string passWordLogin = passLogin.Value.Trim();
 
-            List<User> arrUsers = (List<User>)Application["users"];
+            List<User> arrUsers = (List<User>)Application[Global.LIST_USER];
             bool checkUserName = false;
             bool checkUser = false;
-            User loggedUser = null;
 
             if(arrUsers == null)
             {
@@ -37,7 +36,8 @@ namespace BTL_WEB_NoiThat
                 {
                     checkUser = true;
                     userNameHome = us.sUserName;
-                    loggedUser = us;
+                    Session[Global.USER_NAME] = us.sUserName;
+                    Session[Global.USER_ID] = us.sNameRegister;
                     break;
                 }
                 else if (us.sNameRegister == sUserNameLogin)
@@ -47,7 +47,6 @@ namespace BTL_WEB_NoiThat
             }
             if (checkUser == true)
             { 
-                Session["User"] = loggedUser;
                 Response.Redirect("home.aspx");
             }
             else

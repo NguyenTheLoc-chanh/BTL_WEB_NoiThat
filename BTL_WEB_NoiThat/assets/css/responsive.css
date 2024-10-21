@@ -22,6 +22,10 @@
         list-style: none;
         justify-content: flex-end;
     }
+
+    .cart-button {
+        margin-left: 0;
+    }
 }
 
 /*Tablet */

@@ -20,12 +20,11 @@ namespace BTL_WEB_NoiThat
             string nameRegis = emailOrPhone.Value.Trim();
             string suserName = userName.Value.Trim();
             string pass = passWordRes.Value.Trim();
-            string passAgain = passWordResA.Value.Trim();
 
             // check Email;
             if (checkEmailandSdt(nameRegis))
             {
-                List<User> arrUser = (List<User>)Application["users"];
+                List<User> arrUser = (List<User>)Application[Global.LIST_USER];
 
                 User us = new User();
                 us.sNameRegister = nameRegis;
@@ -33,7 +32,10 @@ namespace BTL_WEB_NoiThat
                 us.sPassRegister = pass;
 
                 arrUser.Add(us);
-                Application["users"] = arrUser;
+                Application[Global.LIST_USER] = arrUser;
+                Session[Global.USER_ID] = us.sNameRegister;
+                Session[Global.USER_NAME] = us.sUserName;
+
                 Response.Redirect("LoginPage.aspx");
             }
             else
@@ -44,11 +46,11 @@ namespace BTL_WEB_NoiThat
         private bool checkEmailandSdt(string nameRegister)
         {
             bool check = true;
-            List<User> arrNameRegistered = Application["users"] as List<User>;
+            List<User> arrNameRegistered = Application[Global.LIST_USER] as List<User>;
             if(arrNameRegistered == null)
             {
                 arrNameRegistered = new List<User>();
-                Application["users"] = arrNameRegistered;
+                Application[Global.LIST_USER] = arrNameRegistered;
             }
             foreach (User us in arrNameRegistered)
             {

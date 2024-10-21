@@ -143,12 +143,28 @@
     color: var(--text-color);
     text-decoration:none;
 }
+.Logout {
+    position: absolute;
+    top: 58px;
+    right: 96px;
+    display: none;
+}
 
-    .header__navbar-user-name.login {
-        position: relative;
-    }
+.Logout::before {
+   position: absolute;
+   top: -16px;
+   content: "";
+   width: 70px;
+   height: 20px;
+}
+#userNameHomeLogin:hover .Logout {
+    display: block;
+}
+.header__navbar-user-name.login {
+    position: relative;
+}
 
-        .header__navbar-user-name.login::before {
+.header__navbar-user-name.login::before {
             content: "";
             display: block;
             position: absolute;
@@ -157,7 +173,7 @@
             right: -14px;
             top: 50%;
             transform: translateY(-50%);
-        }
+}
 
 .active-login {
     display: none;

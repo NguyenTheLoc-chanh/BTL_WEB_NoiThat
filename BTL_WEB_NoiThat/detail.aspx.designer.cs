@@ -24,6 +24,15 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// numberProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl numberProduct;
+
+        /// <summary>
         /// userNameHomeLogin control.
         /// </summary>
         /// <remarks>
@@ -49,5 +58,14 @@ namespace BTL_WEB_NoiThat
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
+
+        /// <summary>
+        /// rowDetailPro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rowDetailPro;
     }
 }

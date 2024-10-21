@@ -146,6 +146,25 @@
     text-decoration: none;
 }
 
+.Logout {
+    position: absolute;
+    top: 58px;
+    right: 96px;
+    display: none;
+}
+
+    .Logout::before {
+        position: absolute;
+        top: -16px;
+        content: "";
+        width: 70px;
+        height: 20px;
+    }
+
+#userNameHomeLogin:hover .Logout {
+    display: block;
+}
+
     .header__navbar-user-name.login {
         position: relative;
     }

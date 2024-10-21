@@ -50,7 +50,7 @@
                             <li class="header__navbar-item header__navbar-cart">
                                 <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                                    <span class="header__cart-notice">3</span>
+                                    <span id="numberProduct" class="header__cart-notice" runat="server">0</span>
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-user">
@@ -104,8 +104,8 @@
             <hr />
             <div class="list_product">
                 <div class="grid wide">
-                    <div class="row">
-                        <div class="col l-4 m-4 c-12">
+                    <div class="row" id="rowProduct" runat="server">
+                        <!-- <div class="col l-4 m-4 c-12">
                             <div class="card">
                                 <a href="detail.aspx" class="card__link">
                                     <img src="./assets/img/product1.jpg" alt="Bathroom Design" />
@@ -136,7 +136,7 @@
                          <div class="col l-4 m-4 c-12">
                             <div class="card">
                                 <a href="detail.aspx" class="card__link">
-                                    <img src="./assets/img/product2.png" alt="Bathroom Design" />
+                                    <img src="./assets/img/product2.png" alt="Bathroom Design"/>
                                 <div class="card-content">
                                     <h2>B013 Bathroom full 2023</h2>
                                     <div class="options-rating">
@@ -272,7 +272,7 @@
                                 </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

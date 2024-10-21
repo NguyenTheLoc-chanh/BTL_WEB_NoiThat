@@ -1,21 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="shoppingcart.aspx.cs" Inherits="BTL_WEB_NoiThat.shoppingcart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="BTL_WEB_NoiThat.checkout" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Shopping cart</title>
-    <link rel="stylesheet" href="./assets/css/cart.css"/>
-    <link rel="stylesheet" href="./assets/css/grid.css"/>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./assets/css/home.css"/>
     <link rel="stylesheet" href="./assets/css/base.css"/>
-    <link rel="stylesheet" href="./assets/css/login.css"/>
+    <link rel="stylesheet" href="./assets/css/grid.css"/>
     <link rel="stylesheet" href="./assets/css/responsive.css"/>
+    <link rel="stylesheet" href="./assets/css/login.css"/>
+    <link rel="stylesheet" href="./assets/css/checkout.css"/>
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.4.0/css/all.css"/>
 </head>
 <body>
-     <div class="cart">  
-       <header class="header">
+    <div class="checkout">
+        <header class="header">
             <div class="grid wide">
                 <div class="header__navbar">
                     <div class="header__logo">
@@ -49,14 +50,12 @@
                             <li class="header__navbar-item header__navbar-cart">
                                 <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                                    <span id="numberProduct" class="header__cart-notice" runat="server">0</span>
+                                    <span class="header__cart-notice" runat="server" id="numberProduct">0</span>
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
-                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server">
-                                    
-                                </span>
+                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server"></span>
                                 <span runat="server" id="spanLogin">
                                     <a href="LoginPage.aspx" class="header__navbar-user-name login">Login</a>
                                 </span>
@@ -70,111 +69,97 @@
                 </div>
             </div>
         </header>
-        <div class="content">
+        <div class="checkout__container">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-6 m-6 c-12" id="rowCart" runat="server">
-                        <!--<div class="cap">
-                            <h3 class="cap-heading">Shopping Cart</h3>
-                        </div>
-                        <div class="content__title">
-                            <ul class="content__title-list">
-                                <li class="content__title-item-name">Name & Option</li>
-                                <li class="content__title-item-price">Price</li>
-                                <li class="content__title-item-remove">Remove</li>
-                            </ul>
-                        </div>
-                        <div class="content__cart-list">
-                            <div class="content__cart-item">
-                                <img src="./assets/img/cart1.jfif" alt="" class="content__cart-item-img"/>
-                                <div class="content__cart-info">
-                                    <h3 class="cart-info-heading">B001 Bathroom Luxury 2024</h3>
-                                    <p>REF:B001</p>
-                                    <div class="cart-info-quantity">
-                                        <span class="cart-info-subtract">-</span>
-                                        <span class="cart-info-number">1</span>
-                                        <span class="cart-info-plus">+</span>
+                    <div class="col l-6 m-6 c-12 checkout-left">
+                        <h3>Thông tin giao hàng</h3>
+                           <div runat="server" id="list_info_checkout">
+                            <form action="HandleCheckout.aspx" method="post" class="checkout-form">
+                                <div class="form-group">
+                                    <input class="form-input" type="text" name="name" placeholder="Họ và tên" required/>
+                                    <input class="form-input" type="email" id="txtEmail" name="email" placeholder="Email" runat="server"/>
+                                    <input class="form-input" type="text" id="txtPhone" name="phone" placeholder="Số điện thoại" required runat="server"/>
+                                    <input class="form-input" type="text" id="txtAddress" name="address" placeholder="Địa chỉ" required runat="server"/>
+                                </div>
+                                <div class="form-group-address">
+                                    <select name="city">
+                                        <option value="">Tỉnh / thành</option>
+                                        <option value="Hà Nội">Hà Nội</option>
+                                        <!-- Thêm các tỉnh/thành khác tại đây -->
+                                    </select>
+                                    <select name="district">
+                                        <option value="">Quận / huyện</option>
+                                        <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+                                        <!-- Thêm các quận/huyện khác tại đây -->
+                                    </select>
+                                    <select name="ward">
+                                        <option value="">Phường / xã</option>
+                                        <option value="Tràng Tiền">Tràng Tiền</option>
+                                        <!-- Thêm các phường/xã khác tại đây -->
+                                    </select>
+                                </div>
+                            
+                                <h4>Phương thức vận chuyển</h4>
+                                <div class="shipping-method">
+                                    <p>Vui lòng chọn tỉnh / thành để có danh sách phương thức vận chuyển.</p>
+                                </div>
+                            
+                                <h4>Phương thức thanh toán</h4>
+                                <div class="payment-method">
+                                    <div class="inner-payment">
+                                        <label for="cod">Thanh toán khi giao hàng (COD)</label>
+                                        <input type="radio" id="cod" name="payment" value="cod" checked/>
+                                    </div>
+                                    <div class="inner-payment">
+                                        <label for="bank">Chuyển khoản qua ngân hàng</label>
+                                        <input type="radio" id="bank" name="payment" value="bank"/>
                                     </div>
                                 </div>
-                                <div class="content__cart-price-remove">
-                                    <h3 class="cart__price">$999</h3>
-                                    <a href="#" class="cart__remove">
-                                        <i class="cart__remove-icon fa-solid fa-trash"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content__cart-list">
-                            <div class="content__cart-item">
-                                <img src="./assets/img/cart1.jfif" alt="" class="content__cart-item-img"/>
-                                <div class="content__cart-info">
-                                    <h3 class="cart-info-heading">B001 Bathroom Luxury 2024</h3>
-                                    <p>REF:B001</p>
-                                    <div class="cart-info-quantity">
-                                        <span class="cart-info-subtract">-</span>
-                                        <span class="cart-info-number">1</span>
-                                        <span class="cart-info-plus">+</span>
-                                    </div>
-                                </div>
-                                <div class="content__cart-price-remove">
-                                    <h3 class="cart__price">$999</h3>
-                                    <a href="#" class="cart__remove">
-                                        <i class="cart__remove-icon fa-solid fa-trash"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content__cart-list">
-                            <div class="content__cart-item">
-                                <img src="./assets/img/cart1.jfif" alt="" class="content__cart-item-img"/>
-                                <div class="content__cart-info">
-                                    <h3 class="cart-info-heading">B001 Bathroom Luxury 2024</h3>
-                                    <p>REF:B001</p>
-                                    <div class="cart-info-quantity">
-                                        <span class="cart-info-subtract">-</span>
-                                        <span class="cart-info-number">1</span>
-                                        <span class="cart-info-plus">+</span>
-                                    </div>
-                                </div>
-                                <div class="content__cart-price-remove">
-                                    <h3 class="cart__price">$999</h3>
-                                    <a href="#" class="cart__remove">
-                                        <i class="cart__remove-icon fa-solid fa-trash"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>-->
+                            
+                                <button type="submit" class="complete-order">Hoàn tất đơn hàng</button>
+                            </form>
+                           </div>
                     </div>
-                    <div class="col l-6 m-6 c-12">
-                        <form class="info" id="formCheckOut" method="post" runat="server" action="checkout.aspx">
-                            <h3 class="info__heading">Complete your information</h3>
-                            <input type="text" id="txtphone" name="txtphone" class="info__input" placeholder="Your phone number" required/>
-                            <input type="email" id="txtemail" name="txtemail" class="info__input" placeholder="Your email" required/>
-                            <input type="text" id="txtaddress" name="txtaddress" class="info__input" placeholder="Your address" required/>
-                            <button type="submit" class="btn_checkout">Go to checkout</button>
-                        </form>
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col l-12 m-12 c-12">
-                        <div class="back__pay">
-                            <div class="back">
-                                <a href="#" class="cart__back">
-                                    <i class="cart__back-icon fa-solid fa-arrow-left"></i>
-                                    <span class="backtohome">Back to home</span>
-                                </a>
+                    <div class="col l-6 m-6 c-12 checkout-right" runat="server" id="list_product_checkout">
+                            <h3>Thông tin sản phẩm mua</h3>
+                            <div class="cart-items">
+                                <!-- Các mục giỏ hàng sẽ được chèn ở đây -->
+                                <div class="cart-item">
+                                    <div class="infor-product-item" style="display: flex;">
+                                        <img src="./assets/img/better.png" alt="{product.Name}"/>
+                                        <div>
+                                            <p style="font-size: 16px;">{product.Name}</p>
+                                            <p style="font-size: 14px; font-weight: 600;">Số lượng: {item.Value}</p>
+                                        </div>
+                                    </div>
+                                    <span>{newPrice.ToString("N0")}đ</span>
+                                </div>
                             </div>
-                            <div class="pay">
-                                <h4>Total:</h4>
-                                <span class="total_pay" id="totalPay" runat="server">123$</span>
+
+                            <div class="cart-summary">
+                                <div class="btn-discount">
+                                    <input type="text" placeholder="Mã giảm giá" name="couponCode"/>
+                                    <button id="use-coupon-btn">Sử dụng</button>
+                                </div>
+                                <div class="summary-detail">
+                                    <p>Tạm tính: <span>{totalPrice.ToString("N0")}đ</span></p>
+                                    HTML cho mã giảm giá sẽ được chèn ở đây
+                                    <p>Mã giảm giá giảm: 
+                                        <span>{cart.Coupon.Discount}% - {(totalPrice - finalPrice).ToString("N0")} đ</span>
+                                    </p>
+                                    <p>Phí vận chuyển: <span>30,000đ</span></p>
+                                    <div class="inner-price">
+                                        <p><strong>Tổng cộng:</strong></p>
+                                        <p><strong>{(finalPrice + 30000).ToString("N0")}đ</strong></p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
+         <footer class="footer">
             <div class="grid wide">
                 <div class="row">
                     <div class="col l-3 m-3 c-12">
@@ -271,8 +256,7 @@
                 </div>
             </div>
         </footer>
-    <script src="./assets/js/home.js"></script>
-    <script src="./assets/js/editCart.js"></script>
+        <script src="./assets/js/home.js"></script>
     </div>
 </body>
 </html>

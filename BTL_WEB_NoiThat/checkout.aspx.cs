@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace BTL_WEB_NoiThat
 {
-    public partial class home : System.Web.UI.Page
+    public partial class checkout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,6 +54,18 @@ namespace BTL_WEB_NoiThat
                 }
             }
 
+            if (IsPostBack)
+            {
+                string phone = Request.Form["txtphone"];
+                string email = Request.Form["txtemail"];
+                string address = Request.Form["txtaddress"];
+
+                txtPhone.Value = phone;
+                txtEmail.Value = email;
+                txtAddress.Value = address;
+            }
+
+            // Load thông tin checkout
         }
     }
 }

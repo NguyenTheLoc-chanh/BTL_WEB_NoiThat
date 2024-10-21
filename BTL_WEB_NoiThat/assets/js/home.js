@@ -176,10 +176,7 @@ function logoutClick() {
         document.getElementById("spanLogin").style.display = "block";
         document.getElementById("spanRegister").style.display = "block";
 
-        // Thông báo đăng xuất thành công
-        alert("Đăng xuất thành công!");
-
         // Chuyển hướng đến trang home.aspx
-        window.location.href = "LoginPage.aspx";
+        window.location.href = "LogoutPage.aspx";
     }
 }

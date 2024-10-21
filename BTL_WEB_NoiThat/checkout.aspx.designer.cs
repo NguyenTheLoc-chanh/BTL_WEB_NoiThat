@@ -11,7 +11,7 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class shoppingcart
+    public partial class checkout
     {
 
         /// <summary>
@@ -51,30 +51,48 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
 
         /// <summary>
-        /// rowCart control.
+        /// list_info_checkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rowCart;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_info_checkout;
 
         /// <summary>
-        /// formCheckOut control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formCheckOut;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
 
         /// <summary>
-        /// totalPay control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalPay;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPhone;
+
+        /// <summary>
+        /// txtAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
+
+        /// <summary>
+        /// list_product_checkout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_product_checkout;
     }
 }

@@ -144,6 +144,23 @@
     text-decoration: none;
 }
 
+.Logout {
+    position: absolute;
+    top: 58px;
+    right: 96px;
+    display: none;
+}
+.Logout::before {
+    position: absolute;
+    top: -16px;
+    content: "";
+    width: 70px;
+    height: 20px;
+}
+
+#userNameHomeLogin:hover .Logout {
+    display: block;
+}
     .header__navbar-user-name.login {
         position: relative;
     }
@@ -280,7 +297,8 @@ h1 {
 }
 
 .order-button,
-.cart-button {
+.cart-button,
+#add_cart {
     display: flex;
     width: 588px;
     padding: 12px 200px;
@@ -299,6 +317,7 @@ h1 {
 }
 
 .cart-button {
+    margin-left: 52.5%;
     background-color: #ffffff !important;
     border: 1px solid #DED0B6;
     color: #C4B69C;

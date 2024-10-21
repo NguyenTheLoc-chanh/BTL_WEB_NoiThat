@@ -49,7 +49,7 @@
                             <li class="header__navbar-item header__navbar-cart">
                                 <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                                    <span class="header__cart-notice">3</span>
+                                    <span id="numberProduct" class="header__cart-notice" runat="server">0</span>
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-user">
@@ -77,8 +77,8 @@
             <p class="breadcrumb">Product details / Product / Bathroom / 2023</p>
           </div>
         </div>
-      <div class="row">
-        <div class="product-container">
+      <div class="row" id="rowDetailPro" runat="server">
+       <!-- <div class="product-container">
           <div class="col l-6 m-6 c-12">
             <div class="product-gallery">
               <div class="main-image">
@@ -117,6 +117,11 @@
             </div>
           </div>
           
+        </div> -->
+      </div>
+      <div class="row">
+          <div class="col l-12 m-12 c-12">
+            <asp:Button CssClass="cart-button" runat="server" OnClick="addProductCart" Text="Add to Cart"/>
         </div>
       </div>
       <div class="row">

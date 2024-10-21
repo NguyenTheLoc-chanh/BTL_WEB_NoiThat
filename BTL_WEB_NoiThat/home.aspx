@@ -50,14 +50,12 @@
                             <li class="header__navbar-item header__navbar-cart">
                                 <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                                    <span class="header__cart-notice">3</span>
+                                    <span class="header__cart-notice" runat="server" id="numberProduct">0</span>
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
-                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server">
-                                    
-                                </span>
+                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server"></span>
                                 <span runat="server" id="spanLogin">
                                     <a href="LoginPage.aspx" class="header__navbar-user-name login">Login</a>
                                 </span>
