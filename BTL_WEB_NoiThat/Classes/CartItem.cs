@@ -10,12 +10,15 @@ namespace BTL_WEB_NoiThat.Classes
         private string id;
         private string userId;
         private Dictionary<int, int> listProduct;
+        private bool wasOrder = false;
+        private Coupon coupon;
 
         public CartItem(string id, Dictionary<int, int> listProduct, string userId)
         {
             this.id = id;
             this.listProduct = listProduct;
             this.userId = userId;
+            this.wasOrder = wasOrder;
         }
         public CartItem(string id, Dictionary<int, int> listProduct)
         {
@@ -43,5 +46,7 @@ namespace BTL_WEB_NoiThat.Classes
             get { return listProduct; }
             set { listProduct = value; }
         }
+        public bool WasOrder { get => wasOrder; set => wasOrder = value; }
+        public Coupon Coupon { get => coupon; set => coupon = value; }
     }
 }

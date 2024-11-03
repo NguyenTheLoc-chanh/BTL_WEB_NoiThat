@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace BTL_WEB_NoiThat
 {
-    public partial class checkout : System.Web.UI.Page
+    public partial class DetailOrder : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,17 +53,29 @@ namespace BTL_WEB_NoiThat
                     }
                 }
             }
-            if (Session["CheckoutInfo"] == null)
-            {
-                string phone = Request.Form["txtphone"];
-                string email = Request.Form["txtemail"];
-                string address = Request.Form["txtaddress"];
 
-                Session["CheckoutInfo"] = new checkoutInfo("", email, phone, address, "Tỉnh / thành", "Quận / Huyện", "Phường/ Xã", "cod");
+            if(Session[Global.USER_ID] != null && Session[Global.USER_ID].ToString() != "")
+            {
+                string userID = Session[Global.USER_ID].ToString();
+                List<Order> orders = Application[Global.LIST_ORDER] as List<Order>;
+
+                if(orders != null)
+                {
+                    List<Order> userOrder = orders.Where(item => item.SUserId == userID).ToList();
+
+                    string htmlOder = LoadOrder.loadOrderDetail(
+                        userOrder,
+                        Application[Global.LIST_PRODUCT] as List<Product>,
+                        Application[Global.LIST_CART] as List<CartItem>);
+
+                    list_info_order.InnerHtml = htmlOder;
+                }
+
             }
-            // Load thông tin checkout
-            list_info_checkout.InnerHtml = LoadData.loadInfoCheckOut(currCart, Session["CheckoutInfo"] as checkoutInfo, Session["checkoutInfoCart"] as checkoutInfo);
-            list_product_checkout.InnerHtml = LoadData.loadInfoProductCheckout(currCart, Application[Global.LIST_PRODUCT] as List<Product>);
+            else
+            {
+                list_info_order.InnerHtml = @"<p class=""noti__order"">Bạn cần đăng nhập để xem đơn hàng!</p>";
+            }
         }
     }
 }

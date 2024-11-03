@@ -180,3 +180,8 @@ function logoutClick() {
         window.location.href = "LogoutPage.aspx";
     }
 }
+
+// Chuyển đến trang Sản phẩm
+function ClickShopNow() {
+    window.location.href = "product.aspx";
+}

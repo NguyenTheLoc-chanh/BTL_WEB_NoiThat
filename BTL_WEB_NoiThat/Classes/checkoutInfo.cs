@@ -28,5 +28,22 @@ namespace BTL_WEB_NoiThat.Classes
             this.ward = ward;
             this.paymentMethod = paymentMethod;
         }
+
+        public checkoutInfo (string email, string phone, string address)
+        {
+            this.email = email;
+            this.phone = phone;
+            this.address = address;
+        }
+
+        public string SName { get => name; set => name = value; }
+        public string SEmail { get => email; set => email = value; }
+        public string SPhone  { get => phone; set => phone = value; }
+        public string SAddress { get => address; set => address = value; }
+        public string SCity { get => city; set => city = value; }
+        public string SDistrict { get => district; set => district = value; }
+        public string SWard { get => ward; set => ward = value; }
+        public string SPaymentMethod { get => paymentMethod; set => paymentMethod = value; }
+
     }
 }

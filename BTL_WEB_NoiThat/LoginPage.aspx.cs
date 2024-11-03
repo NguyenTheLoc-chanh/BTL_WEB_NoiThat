@@ -22,6 +22,7 @@ namespace BTL_WEB_NoiThat
             string passWordLogin = passLogin.Value.Trim();
 
             List<User> arrUsers = (List<User>)Application[Global.LIST_USER];
+            List<Admin> listAdmin = (List<Admin>)Application[Global.LIST_ADMIN];
             bool checkUserName = false;
             bool checkUser = false;
 
@@ -51,6 +52,13 @@ namespace BTL_WEB_NoiThat
             }
             else
             {
+                foreach(Admin admin in listAdmin)
+                {
+                    if(admin.SUserName == sUserNameLogin && admin.SPassWord == passWordLogin)
+                    {
+                        Response.Redirect("adminPage.aspx");
+                    }
+                }
                 if (checkUserName == true)
                 {
                     lbCheckPassLogin.Text = "Sai mật khẩu vui lòng nhập lại!";

@@ -1,0 +1,371 @@
+﻿.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--header-height);
+    background-color: var(--white-color);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+    .header.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.menu__mobile {
+    display: none;
+}
+
+.header__logo {
+    margin-top: 2px;
+    margin-left: 60px;
+}
+
+.header__login-mobile {
+    display: none;
+}
+
+.header__logo-img {
+    width: 84px;
+    height: 78px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.header__nav-item {
+    margin: 0 54px;
+    width: 82px;
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-color);
+}
+
+.header__nav-item-link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+    .header__nav-item-link:hover,
+    .header__navbar-item-icon:hover,
+    .header__search-btn-icon:hover,
+    .header__navbar-user-name:hover,
+    .header__navbar-user-img:hover {
+        color: rgba(99, 96, 96, 0.7);
+        cursor: pointer;
+    }
+/* Tìm kiếm */
+.header__search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header__search-link {
+    position: relative;
+    left: -20px;
+    top: 3px;
+    margin-left: -4px;
+}
+
+.header__search-btn-icon {
+    width: 24px;
+    height: 24px;
+    color: #333;
+}
+
+#search {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    color: var(--text-color);
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 4px;
+    flex: 1;
+}
+/* User */
+.header__navbar-item {
+    margin: 0 4px;
+}
+
+.header__navbar-item-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+    color: #333;
+}
+
+.header__navbar-item-link {
+    position: relative;
+}
+
+.header__cart-notice {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    padding: 1px 4px;
+    font-size: 16px;
+    line-height: 12px;
+    color: var(--white-color);
+    background-color: #000000;
+    border-radius: 10px;
+    border: 2px solid var(--white-color);
+}
+
+.header__navbar-user {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.Logout {
+    position: absolute;
+    top: 58px;
+    right: 96px;
+    display: none;
+}
+
+    .Logout::before {
+        position: absolute;
+        top: -16px;
+        content: "";
+        width: 70px;
+        height: 20px;
+    }
+
+#userNameHomeLogin:hover .Logout {
+    display: block;
+}
+
+.header__navbar-user-name.login {
+    position: relative;
+}
+
+    .header__navbar-user-name.login::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-left: 1px solid var(--border-color);
+        height: 12px;
+        right: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+.active-login {
+    display: none;
+}
+
+.header__navbar-user {
+    width: 144px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.header__navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Order Item Styles */
+.noti__order{
+    margin: 180px 0;
+    padding: 0;
+}
+.order-item {
+    margin-top: 100px;
+    margin-bottom: 160px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .order-head .title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .order-head a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+.order-head a:hover {
+     text-decoration: none;
+     color: rgba(0, 0, 0, 0.3);
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+    .product img {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-name {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .order-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .product img {
+        width: 40px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background: #C4B69C;
+}
+
+.footer__heading {
+    padding-left: 60px;
+    font-family: 'SVN-Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--heading-color);
+    margin-bottom: 0;
+}
+
+.footer__list {
+    list-style: none;
+    padding-left: 60px;
+}
+
+.footer-item {
+    margin-bottom: 6px;
+}
+
+.footer-item__p {
+    width: 253px;
+    padding-left: 60px;
+}
+
+.footer-item__link {
+    text-align: center;
+    text-decoration: none;
+    width: 117px;
+    height: 19px;
+    font-family: 'SVN-Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--text-color);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list-social {
+    list-style: none;
+}
+
+.footer-item-social {
+    margin-right: 24px;
+}
+
+.footer__info {
+    padding-left: 60px;
+    font-family: 'SVN-Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--heading-color);
+}
+
+.footer__list-social {
+    display: flex;
+}
+
+.footer-item__link:hover {
+    color: var(--hover-color);
+}

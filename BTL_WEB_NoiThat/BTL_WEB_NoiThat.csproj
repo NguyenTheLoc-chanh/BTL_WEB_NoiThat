@@ -68,10 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddPageProductToCarrt.aspx" />
+    <Content Include="adminPage.aspx" />
+    <Content Include="assets\css\admin.css" />
     <Content Include="assets\css\base.css" />
     <Content Include="assets\css\cart.css" />
     <Content Include="assets\css\checkout.css" />
     <Content Include="assets\css\detail.css" />
+    <Content Include="assets\css\detailOrder.css" />
     <Content Include="assets\css\grid.css" />
     <Content Include="assets\css\home.css" />
     <Content Include="assets\css\login.css" />
@@ -2162,12 +2165,17 @@
     <Content Include="assets\img\special_product.png" />
     <Content Include="assets\img\Subnewproduct.png" />
     <Content Include="assets\img\support.png" />
+    <Content Include="assets\js\admin.js" />
+    <Content Include="assets\js\checkout.js" />
     <Content Include="assets\js\editCart.js" />
     <Content Include="assets\js\home.js" />
     <Content Include="checkout.aspx" />
     <Content Include="DelProductInCart.aspx" />
     <Content Include="detail.aspx" />
+    <Content Include="DetailOrder.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HandleCheckout.aspx" />
+    <Content Include="HandleUsingCoupon.aspx" />
     <Content Include="home.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="LogoutPage.aspx" />
@@ -2185,6 +2193,13 @@
     <Compile Include="AddPageProductToCarrt.aspx.designer.cs">
       <DependentUpon>AddPageProductToCarrt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="adminPage.aspx.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminPage.aspx.designer.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="checkout.aspx.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2192,8 +2207,11 @@
     <Compile Include="checkout.aspx.designer.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\CartItem.cs" />
     <Compile Include="Classes\checkoutInfo.cs" />
+    <Compile Include="Classes\Coupon.cs" />
+    <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="DelProductInCart.aspx.cs">
@@ -2210,8 +2228,29 @@
     <Compile Include="detail.aspx.designer.cs">
       <DependentUpon>detail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetailOrder.aspx.cs">
+      <DependentUpon>DetailOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailOrder.aspx.designer.cs">
+      <DependentUpon>DetailOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HandleCheckout.aspx.cs">
+      <DependentUpon>HandleCheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandleCheckout.aspx.designer.cs">
+      <DependentUpon>HandleCheckout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandleUsingCoupon.aspx.cs">
+      <DependentUpon>HandleUsingCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandleUsingCoupon.aspx.designer.cs">
+      <DependentUpon>HandleUsingCoupon.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -2221,6 +2260,7 @@
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoadData.cs" />
+    <Compile Include="LoadOrder.cs" />
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

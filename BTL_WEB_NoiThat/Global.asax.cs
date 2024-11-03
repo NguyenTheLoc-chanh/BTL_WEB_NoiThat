@@ -17,12 +17,16 @@ namespace BTL_WEB_NoiThat
         public const string USER_NAME = "USER_NAME";
         public const string YOUR_CART = "YOUR_CART";
         public const string USER_ID = "USER_ID";
+        public const string LIST_COUPON = "LIST_COUPON";
+        public const string LIST_ORDER = "LIST_ORDER";
+
+        public const string LIST_ADMIN = "LIST_ADMIN";
         protected void Application_Start(object sender, EventArgs e)
         {
             Application[Global.LIST_USER] = new List<User>();
 
             List<User> listUser = new List<User>();
-            listUser.Add(new User("0123456789","Nguyễn Văn Nam","abc@12345"));
+            listUser.Add(new User("0123456789","Nguyễn Thế Lộc","abc@12345"));
             listUser.Add(new User("tuan@gmail.com", "Nguyễn Văn Tuấn", "abc@12345"));
             Application[Global.LIST_USER] = listUser;
 
@@ -31,19 +35,43 @@ namespace BTL_WEB_NoiThat
 
             List<Product> listProduct = new List<Product>();
             listProduct.Add(new Product(1, "B013 Bathroom full 2023", "./assets/img/product1.jpg", 674, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg",20));
-            listProduct.Add(new Product(2, "B013 Bathroom full 2023", "./assets/img/product2.png", 700,"","","","",20));
-            listProduct.Add(new Product(3, "B013 Bathroom full 2023", "./assets/img/product3.png", 654,"","","","",10));
-            listProduct.Add(new Product(4, "B013 Bathroom full 2023", "./assets/img/product4.png", 600,"", "", "", "",30));
-            listProduct.Add(new Product(5, "B013 Bathroom full 2023", "./assets/img/product5.png", 942,"", "", "", "",30));
-            listProduct.Add(new Product(6, "B013 Bathroom full 2023", "./assets/img/product6.png", 125,"", "", "", "",30));
-            listProduct.Add(new Product(7, "B013 Bathroom full 2023", "./assets/img/product7.png", 146,"", "", "", "",30));
-            listProduct.Add(new Product(8, "B013 Bathroom full 2023", "./assets/img/product5.png", 174,"", "", "", "",30));
+            listProduct.Add(new Product(2, "B023 Bathroom full 2023", "./assets/img/product2.png", 700, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 20));
+            listProduct.Add(new Product(3, "B001 Bathroom Luxury 2022", "./assets/img/product3.png", 654, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 10));
+            listProduct.Add(new Product(4, "K056 Kitchen Option", "./assets/img/product4.png", 600, "Kitchen interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 30));
+            listProduct.Add(new Product(5, "W013 Workspace Decoration Full", "./assets/img/product5.png", 942, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 30));
+            listProduct.Add(new Product(6, "L091 Livingroom Full 2020", "./assets/img/product6.png", 125, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 30));
+            listProduct.Add(new Product(7, "Dinning room Full", "./assets/img/product7.png", 146, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 30));
+            listProduct.Add(new Product(8, "W013 Workspace Decoration Full", "./assets/img/product5.png", 174, "Bathroom interiors seamlessly marry function, integrating chic vanities, efficient storage, and stylish fixtures. Whether boasting a modern, minimalistic vibe or exuding classic charm, the design prioritizes comfort and visual allure, catering to daily needs with flair.", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", "./assets/img/detail2.jpg", 30));
+            listProduct.Add(new Product(9, "Special Wood Full", "./assets/img/special_product.png", 1000, "A wooden dining set comprises a table and chairs crafted from wood, adding a warm touch to living or working spaces. With diverse designs ranging from modern to classic, these sets combine the natural beauty and durability of wood, enhancing both aesthetics and functionality...", "./assets/img/special_product.png", "./assets/img/special_product.png", "./assets/img/special_product.png", 5));
+            listProduct.Add(new Product(10, "Special Wood Full", "./assets/img/special_product.png", 1000, "A wooden dining set comprises a table and chairs crafted from wood, adding a warm touch to living or working spaces. With diverse designs ranging from modern to classic, these sets combine the natural beauty and durability of wood, enhancing both aesthetics and functionality...", "./assets/img/special_product.png", "./assets/img/special_product.png", "./assets/img/special_product.png", 5));
+            listProduct.Add(new Product(11, "Special Wood Full", "./assets/img/special_product.png", 1000, "A wooden dining set comprises a table and chairs crafted from wood, adding a warm touch to living or working spaces. With diverse designs ranging from modern to classic, these sets combine the natural beauty and durability of wood, enhancing both aesthetics and functionality...", "./assets/img/special_product.png", "./assets/img/special_product.png", "./assets/img/special_product.png", 5));
             Application[Global.LIST_PRODUCT] = listProduct;
 
             //Giỏ hàng
             Application[Global.LIST_CART] = new List<CartItem>
             {
                 new CartItem("cart-1", new Dictionary<int, int> { { 1, 2 } }, "0123456789"),
+            };
+
+            Application[Global.LIST_COUPON] = new List<Coupon>
+            {
+                new Coupon("CN14EX", "Discount 50% for loyal customer !", 50, DateTime.Now.AddDays(30)),
+                new Coupon("PK45AL", "Discount 10% for loyal customer !", 10, DateTime.Now.AddDays(10)),
+                new Coupon("THDTN", "Discount 20% for loyal customer !", 20, DateTime.Now.AddDays(20)),
+            };
+
+            Application[Global.LIST_ORDER] = new List<Order>
+            {
+                new Order("order-item-1","0123456789", "cart-1","pending", "online", DateTime.Now, new checkoutInfo(
+                    "Nguyễn Thế Lộc", "nguyenthienthan6@gmail.com", "0123456789","Số 87 Ngõ 337", "Hà Nội", "Hai Bà Trưng", "Vĩnh Tuy", "online"
+                )),
+            };
+
+            // Admin list
+            Application[Global.LIST_ADMIN] = new List<Admin> 
+            {
+                new Admin("admin","admin@12345"),
+                new Admin("nguyentheloc","nguyentheloc@12345")
             };
         }
 

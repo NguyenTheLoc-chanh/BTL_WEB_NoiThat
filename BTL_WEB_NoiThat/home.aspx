@@ -35,7 +35,7 @@
                                 <a href="#" class="header__nav-item-link">About</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-item-link">Contact</a>
+                                <a href="DetailOrder.aspx" class="header__nav-item-link">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +77,7 @@
                             <div class="banner__content">
                                 <span class="banner__slogan">TN Interior Designing Dreams</span>
                                 <span class="banner__slogan-text">Crafting Your Perfect Space</span>
-                                <button class="btn__shopnow">Shop now</button>
+                                <button class="btn__shopnow" onclick="ClickShopNow();">Shop now</button>
                             </div>
                             <img src="./assets/img/Rectangle.png" alt="Banner" class="banner__img"/>
                         </div>

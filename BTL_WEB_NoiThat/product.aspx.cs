@@ -60,46 +60,52 @@ namespace BTL_WEB_NoiThat
             }
 
             //Load Sản phẩm
-            List<Product> listProduct = (List<Product>)Application[Global.LIST_PRODUCT];
-            string product = "";
-
-            for(int i = 0; i < listProduct.Count; i++)
+            if (!IsPostBack)
             {
-                Product prod = (Product)listProduct[i];
-                product += $@"
-                            <div class=""col l-4 m-4 c-12"">
-                                <div class=""card"">
-                                    <a href=""detail.aspx?id={prod.iID}"" class=""card__link"">
-                                        <img src=""{prod.sImgProduct}"" alt=""Bathroom Design"" />
-                                        <div class=""card-content"">
-                                            <h2>{prod.sNameProduct}</h2>
-                                            <div class=""options-rating"">
-                                                <span class=""options"">3 options</span>
-                                                <div class=""rating"">
-                                                    <span>3.7</span>
-                                                    <i class=""fas fa-star""></i>
-                                                    <i class=""fas fa-star""></i>
-                                                    <i class=""fas fa-star""></i>
-                                                    <i class=""fas fa-star-half-alt""></i>
-                                                    <i class=""far fa-star""></i>
-                                                </div>
-                                            </div>
-                                            <div class=""price"">
-                                                <span>${prod.iPriceProduct}</span>
-                                            </div>
-                                            <div class=""icons"">
-                                                <a href='AddPageProductToCarrt.aspx?id={prod.iID}&quantity={1}' class='cart__add' data-product-id='{prod.iID}'>
-                                                   <i class=""fas fa-shopping-cart""></i>
-                                                </a>
-                                                <i class=""fas fa-heart""></i>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>";
-            }
+                List<Product> listProduct = (List<Product>)Application[Global.LIST_PRODUCT];
 
-            rowProduct.InnerHtml = product;
+                rowProduct.InnerHtml = LoadData.loadProduct(listProduct);
+            }
+        }
+        protected void LinkButton_Click(object sender, EventArgs e)
+        {
+            LinkButton clickedButton = sender as LinkButton;
+            string category = clickedButton.CommandArgument;
+
+            DisplayProducts(category);
+        }
+
+        private void DisplayProducts(string category)
+        {
+            List<Product> listProduct = (List<Product>)Application[Global.LIST_PRODUCT];
+
+            switch (category)
+            {
+                case "all":
+                    rowProduct.InnerHtml = LoadData.loadProduct(listProduct);
+                    break;
+                case "bathroom":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Bathroom", listProduct);
+                    break;
+                case "bedroom":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Bedroom", listProduct);
+                    break;
+                case "livingroom":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Livingroom", listProduct);
+                    break;
+                case "workspace":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Workspace", listProduct);
+                    break;
+                case "diningroom":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Dining room", listProduct);
+                    break;
+                case "meetingroom":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Meetingroom", listProduct);
+                    break;
+                case "kitchen":
+                    rowProduct.InnerHtml = LoadData.loadProductFilter("Kitchen", listProduct);
+                    break;
+            }
         }
     }
 

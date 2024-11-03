@@ -11,7 +11,7 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class checkout
+    public partial class DetailOrder
     {
 
         /// <summary>
@@ -51,50 +51,12 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
 
         /// <summary>
-        /// list_info_checkout control.
+        /// list_info_order control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_info_checkout;
-
-        /// <summary>
-        /// txtEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
-
-        /// <summary>
-        /// txtPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPhone;
-
-        /// <summary>
-        /// txtAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
-
-        /// <summary>
-        /// list_product_checkout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_product_checkout;
-        protected global::System.Web.UI.HtmlControls.HtmlInputText coupon__Price;
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl finalProduct1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_info_order;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="BTL_WEB_NoiThat.checkout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="BTL_WEB_NoiThat.checkout" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -75,7 +75,7 @@
                     <div class="col l-6 m-6 c-12 checkout-left">
                         <h3>Thông tin giao hàng</h3>
                            <div runat="server" id="list_info_checkout">
-                            <form action="HandleCheckout.aspx" method="post" class="checkout-form">
+                            <!--<form action="HandleCheckout.aspx" method="post" class="checkout-form">
                                 <div class="form-group">
                                     <input class="form-input" type="text" name="name" placeholder="Họ và tên" required/>
                                     <input class="form-input" type="email" id="txtEmail" name="email" placeholder="Email" runat="server"/>
@@ -86,17 +86,14 @@
                                     <select name="city">
                                         <option value="">Tỉnh / thành</option>
                                         <option value="Hà Nội">Hà Nội</option>
-                                        <!-- Thêm các tỉnh/thành khác tại đây -->
                                     </select>
                                     <select name="district">
                                         <option value="">Quận / huyện</option>
                                         <option value="Hoàn Kiếm">Hoàn Kiếm</option>
-                                        <!-- Thêm các quận/huyện khác tại đây -->
                                     </select>
                                     <select name="ward">
                                         <option value="">Phường / xã</option>
                                         <option value="Tràng Tiền">Tràng Tiền</option>
-                                        <!-- Thêm các phường/xã khác tại đây -->
                                     </select>
                                 </div>
                             
@@ -118,13 +115,12 @@
                                 </div>
                             
                                 <button type="submit" class="complete-order">Hoàn tất đơn hàng</button>
-                            </form>
+                            </form> -->
                            </div>
                     </div>
                     <div class="col l-6 m-6 c-12 checkout-right" runat="server" id="list_product_checkout">
-                            <h3>Thông tin sản phẩm mua</h3>
+                            <!--<h3>Thông tin sản phẩm mua</h3>
                             <div class="cart-items">
-                                <!-- Các mục giỏ hàng sẽ được chèn ở đây -->
                                 <div class="cart-item">
                                     <div class="infor-product-item" style="display: flex;">
                                         <img src="./assets/img/better.png" alt="{product.Name}"/>
@@ -154,7 +150,7 @@
                                         <p><strong>{(finalPrice + 30000).ToString("N0")}đ</strong></p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                     </div>
                 </div>
             </div>
@@ -257,6 +253,7 @@
             </div>
         </footer>
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/checkout.js"></script>
     </div>
 </body>
 </html>

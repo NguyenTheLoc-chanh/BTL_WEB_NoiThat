@@ -80,14 +80,14 @@
                    <div class="row">
                        <div class="option col c-12">
                             <ul class="option-list">
-                                <li class="option-item"><a class="option-item-link" href="#">All</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Bathroom</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Bedroom</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Livingroom</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Workspace</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Dinning room</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Meeting room</a></li>
-                                <li class="option-item"><a class="option-item-link" href="#">Kitchen</a></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkAll" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="all">All</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkBathroom" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="bathroom">Bathroom</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkBedroom" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="bedroom">Bedroom</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkLivingroom" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="livingroom">Livingroom</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkWorkspace" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="workspace">Workspace</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkDiningroom" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="diningroom">Dining room</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkMeetingroom" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="meetingroom">Meeting room</asp:LinkButton></li>
+                                <li class="option-item"><asp:LinkButton ID="LinkKitchen" CssClass="option-item-link" runat="server" OnClick="LinkButton_Click" CommandArgument="kitchen">Kitchen</asp:LinkButton></li>
                             </ul>
                            <div class="filter">
                                 <input class="filter__search" type="text" name="filter" placeholder="Add filter" value="" />
