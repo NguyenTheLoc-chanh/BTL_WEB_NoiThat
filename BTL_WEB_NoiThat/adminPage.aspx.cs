@@ -191,6 +191,7 @@ namespace BTL_WEB_NoiThat
                     userHtml += $"<td>{us.sUserName}</td>";
                     userHtml += $"<td>{us.sNameRegister}</td>";
                     userHtml += $"<td>{us.sPassRegister}</td>";
+                    //userHtml += $"<td>{us.IdConfirm}</td>";
                     userHtml += "<td>";
                     userHtml += $"<button class='btn' onclick=\"editUser('{us.sNameRegister}', '{us.sUserName}', '{us.sPassRegister}')\">Sửa</button>";
                     userHtml += $"<button class='btn' onclick=\"deleteUser('{us.sNameRegister}')\">Xóa</button>";
@@ -211,6 +212,10 @@ namespace BTL_WEB_NoiThat
             string fullName = Request.Form["username"];
             string nameRegister = Request.Form["nameRegister"];
             string password = Request.Form["password"];
+            // Sử dụng cái command khi cần
+            //string idConfirm = Request.Form["Confirm"];
+
+            //User user = new User(nameRegister, fullName, password, idConfirm);
 
             User user = new User(nameRegister, fullName, password);
 

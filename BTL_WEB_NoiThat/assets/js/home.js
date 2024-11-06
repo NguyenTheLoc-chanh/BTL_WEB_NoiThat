@@ -84,10 +84,14 @@ function validateInput() {
     const userName = document.getElementById("userName").value;
     const password = document.getElementById("passWordRes").value;
     const confirmPassword = document.getElementById("passWordResA").value;
+    // const idSubmit = document.getElementById("idSubmit").value;
+
     const errorLabel = document.getElementById("lbCheckEmailOrP");
     const userNameErrorLabel = document.getElementById("lbCheckUserName");
     const passwordErrorLabel = document.getElementById("lbcheckpassWordRes");
     const confirmPasswordErrorLabel = document.getElementById("lcCheckPassA");
+    // const confirmIdSubmitdErrorLabel = document.getElementById("lcCheckIdSubmit");
+
 
 
     // Reset thông báo lỗi
@@ -95,6 +99,8 @@ function validateInput() {
     if (userNameErrorLabel) userNameErrorLabel.innerText = "";
     if (passwordErrorLabel) passwordErrorLabel.innerText = "";
     if (confirmPasswordErrorLabel) confirmPasswordErrorLabel.innerText = "";
+    // if (confirmIdSubmitdErrorLabel) confirmPasswordErrorLabel.innerText = "";
+
 
     // Kiểm tra dữ liệu nhập vào
     if (emailOrPhone.trim() === "") {
@@ -133,6 +139,18 @@ function validateInput() {
         confirmPasswordErrorLabel.innerText = "Mật khẩu không khớp!";
         return false; // Ngăn chặn gửi form
     }
+
+    // Thêm kiểm tra dữ liệu nếu muốn sử dụng vị trí tự do thì dùng regex dưới
+    // /^(?=(.*\d){2})(?=(.*[A-Z]){3}).*$/
+    /*
+    if (idSubmit.trim() === "") {
+        confirmIdSubmitdErrorLabel.innerText = "Vui lòng điền mã xác nhận!";
+        return false;
+    } else if (!/^\d{2}[A-Z]{3}$/.test(idSubmit)) {
+        confirmIdSubmitdErrorLabel.innerText = "Mã phải có 2 chữ số và 3 chữ cái viết hoa!";
+        return false;
+    }
+    */
 
     return true; // Cho phép gửi form
 }

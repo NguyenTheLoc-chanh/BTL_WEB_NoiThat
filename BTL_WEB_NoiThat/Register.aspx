@@ -43,6 +43,10 @@
                                     <input type="password" class="auth-form__input" id="passWordResA" runat ="server" placeholder="Nhập lại mật khẩu"/>
                                     <asp:Label CssClass="error" ID="lcCheckPassA" runat="server"></asp:Label>
                                 </div> 
+                                <div class="auth-form__group">
+                                        <input type="text" class="auth-form__input" id="idSubmit" runat ="server" placeholder="Nhập mã xác nhận"/>
+                                        <asp:Label CssClass="error" ID="lcCheckIdSubmit" runat="server"></asp:Label>
+                                </div>
                             </div>
         
                             <div class="auth-form__aside">

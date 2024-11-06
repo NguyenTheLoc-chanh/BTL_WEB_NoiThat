@@ -101,6 +101,10 @@
                 <label for="password">Mật khẩu</label>
                 <input type="password" id="password" name="password" required />
                 <asp:Label CssClass="error" ID="lbPassWord" runat="server"></asp:Label>
+
+                <!-- <label for="idConfirm">Mã xác nhận</label>
+                <input type="password" id="idConfirm" name="Confirm" required />
+                <asp:Label CssClass="error" ID="lbConfirm" runat="server"></asp:Label> -->
                 <button type="submit" name="action" value="addUser" onclick="return validateInput();">Thêm người dùng</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Hủy</button>
             </form>

@@ -579,4 +579,92 @@
     .pay {
         margin-right: 16px;
     }
+
+    /* Product */
+    .product {
+        margin: 0 8px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .card img {
+       width: 100%;
+    }
+
+    /* Mobile Category */
+    .mobile-category {
+        display: block;
+    }
+
+    .filter__search {
+        width: 100%;
+        margin: 8px 0px;
+    }
+    .mobile-category__list {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+        .mobile-category__list::-webkit-scrollbar {
+            display: none;
+        }
+
+    .mobile-category__item {
+        flex-shrink: 0;
+        /* Để quy định những đối tượng Flex item bị co nhỏ lại khi nằm chung trong 1 thẻ cha mà thẻ
+    cha lại bị giới hạn kích thước thì item sẽ tự động co lại- nếu để = 0 thì không tự động co lại */
+        margin-right: 10px;
+    }
+
+        .mobile-category__item:nth-last-of-type(3n) .mobile-category__link {
+            background-color: #87AFD8;
+        }
+
+        .mobile-category__item:nth-last-of-type(3n + 2) .mobile-category__link {
+            background-color: #76C9BD;
+        }
+
+        .mobile-category__item:nth-last-of-type(3n + 1) .mobile-category__link {
+            background-color: #88CF81;
+        }
+
+    .mobile-category__link {
+        --line-height: 26px;
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: var(--line-height);
+        height: calc(var(--line-height) * 2);
+        overflow: hidden;
+        text-align: center;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        width: 110px;
+        border-radius: 5px;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        padding: 6px 6px;
+        align-items: center;
+        justify-content: end;
+    }
+
+    /* Css cho layout 2 cột yêu cầu mobile 2 cột thì mở lên*/
+    /*.options-rating {
+        display: inline-block;
+    }
+
+    .rating {
+        margin-top: 8px;
+    }
+    */
 }

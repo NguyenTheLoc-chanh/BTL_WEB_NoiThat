@@ -20,7 +20,7 @@ namespace BTL_WEB_NoiThat
             string nameRegis = emailOrPhone.Value.Trim();
             string suserName = userName.Value.Trim();
             string pass = passWordRes.Value.Trim();
-
+            // string idConfirm = idSubmit.Value.Trim();
             // check Email;
             if (checkEmailandSdt(nameRegis))
             {
@@ -30,6 +30,7 @@ namespace BTL_WEB_NoiThat
                 us.sNameRegister = nameRegis;
                 us.sUserName = suserName;
                 us.sPassRegister = pass;
+                // us.IdConfirm = idConfirm;
 
                 arrUser.Add(us);
                 Application[Global.LIST_USER] = arrUser;

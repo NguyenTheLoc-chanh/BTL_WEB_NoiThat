@@ -27,9 +27,11 @@ namespace BTL_WEB_NoiThat
                 Product pro1 = specialProducts[0];
                 Product pro2 = specialProducts[1];
                 Product pro3 = specialProducts[2];
-                speacialProduct += $@"
+                if(i == 2)
+                {
+                    speacialProduct += $@"
 <div class=""col l-6 m-12 c-12"">
-    <a href=""#"" class=""product__special-item"">
+    <a href=""detail.aspx?id={pro1.iID}"" class=""product__special-item"">
         <div class=""product__special-mobile"">
             <img src=""{pro1.sImgProduct}"" alt=""product__special"" class=""product__special-img""/>
             <div class=""product__special-mobile-group"">
@@ -69,10 +71,10 @@ namespace BTL_WEB_NoiThat
                 <span class=""product__special-price"">${pro1.iPriceProduct}</span>
             </div>
             <div class=""product__special-addCart"">
-                <button class=""btn__addcart"">
+                <a class=""btn__addcart"" href='AddPageProductToCarrt.aspx?id={pro1.iID}&quantity={1}' class='cart__add' data-product-id='{pro1.iID}'>
                     <i class=""product__special-item-icon fa-solid fa-cart-shopping""></i>
                     Add to cart
-                </button>
+                </a>
             </div>
         </div>
     </a>
@@ -102,7 +104,7 @@ namespace BTL_WEB_NoiThat
                 </div>
                 <div class=""row"">
                     <div class=""col l-6 m-6 c-12"">
-                        <a href=""#"" class=""other__product-relate"">
+                        <a href=""detail.aspx?id={pro2.iID}"" class=""other__product-relate"">
                             <img src=""{pro2.sImgProduct}"" alt=""product__special"" class=""other__product-img""/>
                             <div>
                                 <span class=""product__other-info-name"">{pro2.sNameProduct}</span>
@@ -119,7 +121,7 @@ namespace BTL_WEB_NoiThat
                         </a>
                     </div>
                     <div class=""col l-6 m-6 c-12"">
-                        <a href=""#"" class=""other__product-relate"">
+                        <a href=""detail.aspx?id={pro3.iID}"" class=""other__product-relate"">
                             <img src=""{pro3.sImgProduct}"" alt=""product__special"" class=""other__product-img""/>
                             <div>
                                 <span class=""product__other-info-name"">{pro3.sNameProduct}</span>
@@ -140,6 +142,7 @@ namespace BTL_WEB_NoiThat
         </div>
     </div>
 </div>";
+                }
             }
             return speacialProduct;
         }
@@ -150,7 +153,7 @@ namespace BTL_WEB_NoiThat
             {
                 Product prod = (Product)listProduct[i];
                 productHtml += $@"
-                            <div class=""col l-4 m-4 c-12"">
+                            <div class=""col l-4 m-4 c-6"">
                                 <div class=""card"">
                                     <a href=""detail.aspx?id={prod.iID}"" class=""card__link"">
                                         <img src=""{prod.sImgProduct}"" alt=""Bathroom Design"" />

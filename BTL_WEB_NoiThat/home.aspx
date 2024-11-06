@@ -17,7 +17,7 @@
     <form id="form1" runat="server">
         <div class="home">
         <header class="header">
-            <div class="grid wide">
+            <div class="grid wide"> 
                 <div class="header__navbar">
                     <div class="header__logo">
                         <a href="home.aspx"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
@@ -145,7 +145,7 @@
                             <h3 class="product__special-heading">Special Product</h3>
                         </div>
                     </div>
-                    <div class="row">
+                    <div id="innerHtmlSpecial" class="row" runat="server">
                         <div class="col l-6 m-12 c-12">
                             <a href="#" class="product__special-item">
                                 <div class="product__special-mobile">

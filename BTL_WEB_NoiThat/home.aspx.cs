@@ -54,6 +54,9 @@ namespace BTL_WEB_NoiThat
                 }
             }
 
+            List<Product> listProduct = Application[Global.LIST_PRODUCT] as List<Product>;
+            innerHtmlSpecial.InnerHtml = LoadData.loadSpecialProductHome(listProduct);
+
         }
     }
 }
