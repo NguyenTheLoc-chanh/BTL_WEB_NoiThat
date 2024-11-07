@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace BTL_WEB_NoiThat
 {
-    public partial class home : System.Web.UI.Page
+    public partial class DetailOrder : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,9 +54,28 @@ namespace BTL_WEB_NoiThat
                 }
             }
 
-            List<Product> listProduct = Application[Global.LIST_PRODUCT] as List<Product>;
-            innerHtmlSpecial.InnerHtml = LoadData.loadSpecialProductHome(listProduct);
+            if(Session[Global.USER_ID] != null && Session[Global.USER_ID].ToString() != "")
+            {
+                string userID = Session[Global.USER_ID].ToString();
+                List<Order> orders = Application[Global.LIST_ORDER] as List<Order>;
 
+                if(orders != null)
+                {
+                    List<Order> userOrder = orders.Where(item => item.SUserId == userID).ToList();
+
+                    string htmlOder = LoadOrder.loadOrderDetail(
+                        userOrder,
+                        Application[Global.LIST_PRODUCT] as List<Product>,
+                        Application[Global.LIST_CART] as List<CartItem>);
+
+                    list_info_order.InnerHtml = htmlOder;
+                }
+
+            }
+            else
+            {
+                list_info_order.InnerHtml = @"<p class=""noti__order"">Bạn cần đăng nhập để xem đơn hàng!</p>";
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class home
+    public partial class detail
     {
 
         /// <summary>
@@ -60,12 +60,12 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
 
         /// <summary>
-        /// innerHtmlSpecial control.
+        /// rowDetailPro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl innerHtmlSpecial;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rowDetailPro;
     }
 }

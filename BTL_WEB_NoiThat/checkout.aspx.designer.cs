@@ -11,17 +11,8 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class home
+    public partial class checkout
     {
-
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// numberProduct control.
@@ -60,12 +51,50 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
 
         /// <summary>
-        /// innerHtmlSpecial control.
+        /// list_info_checkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl innerHtmlSpecial;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_info_checkout;
+
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
+
+        /// <summary>
+        /// txtPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPhone;
+
+        /// <summary>
+        /// txtAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
+
+        /// <summary>
+        /// list_product_checkout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_product_checkout;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText coupon__Price;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl finalProduct1;
     }
 }

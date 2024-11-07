@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace BTL_WEB_NoiThat
 {
-    public partial class home : System.Web.UI.Page
+    public partial class checkout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,10 +53,17 @@ namespace BTL_WEB_NoiThat
                     }
                 }
             }
+            if (Session["CheckoutInfo"] == null)
+            {
+                string phone = Request.Form["txtphone"];
+                string email = Request.Form["txtemail"];
+                string address = Request.Form["txtaddress"];
 
-            List<Product> listProduct = Application[Global.LIST_PRODUCT] as List<Product>;
-            innerHtmlSpecial.InnerHtml = LoadData.loadSpecialProductHome(listProduct);
-
+                Session["CheckoutInfo"] = new checkoutInfo("", email, phone, address, "Tỉnh / thành", "Quận / Huyện", "Phường/ Xã", "cod");
+            }
+            // Load thông tin checkout
+            list_info_checkout.InnerHtml = LoadData.loadInfoCheckOut(currCart, Session["CheckoutInfo"] as checkoutInfo, Session["checkoutInfoCart"] as checkoutInfo);
+            list_product_checkout.InnerHtml = LoadData.loadInfoProductCheckout(currCart, Application[Global.LIST_PRODUCT] as List<Product>);
         }
     }
 }

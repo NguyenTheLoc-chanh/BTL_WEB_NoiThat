@@ -17,25 +17,25 @@
     <form id="form1" runat="server">
         <div class="home">
         <header class="header">
-            <div class="grid wide">
+            <div class="grid wide"> 
                 <div class="header__navbar">
                     <div class="header__logo">
-                        <a href="#"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
+                        <a href="home.aspx"><img src="./assets/img/logoTN-01 1.png" alt="Logo" class="header__logo-img"/></a>
                     </div>
-                    <span class="header__login-mobile">Đăng nhập</span>
+                    <a class="header__login-mobile" href="LoginPage.aspx">Đăng nhập</a>
                     <div class="header__nav header__nav-mobile">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-item-link">Home</a>
+                                <a href="home.aspx" class="header__nav-item-link">Home</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-item-link">Product</a>
+                                <a href="product.aspx" class="header__nav-item-link">Product</a>
                             </li>
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-item-link">About</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-item-link">Contact</a>
+                                <a href="DetailOrder.aspx" class="header__nav-item-link">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -47,17 +47,21 @@
                             </a>
                         </div> -->
                         <ul class="header__nav-list">
-                            <li class="header__navbar-item">
-                                <a href="#" class="header__navbar-item-link">
+                            <li class="header__navbar-item header__navbar-cart">
+                                <a href="shoppingcart.aspx" class="header__navbar-item-link">
                                     <i class="header__navbar-item-icon fa-solid fa-cart-shopping"></i>
-                                    <span class="header__cart-notice">3</span>
+                                    <span class="header__cart-notice" runat="server" id="numberProduct">0</span>
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/logoTN-01 1.png" alt="" class="header__navbar-user-img"/>
-                                <span class="header__navbar-user-name active-login">Nguyễn Thế Lộc</span>
-                                <span class="header__navbar-user-name login">Đăng nhập</span>
-                                <span class="header__navbar-user-name register">Đăng ký</span>
+                                <span class="header__navbar-user-name" id="userNameHomeLogin" runat="server"></span>
+                                <span runat="server" id="spanLogin">
+                                    <a href="LoginPage.aspx" class="header__navbar-user-name login">Login</a>
+                                </span>
+                                <span runat="server" id="spanRegister">
+                                      <a href="Register.aspx" class="header__navbar-user-name register">Register</a>
+                                </span>
                             </li>
                         </ul>
                         <img src="./assets/img/menu.png" alt="Menu" class="menu__mobile"/>
@@ -73,7 +77,7 @@
                             <div class="banner__content">
                                 <span class="banner__slogan">TN Interior Designing Dreams</span>
                                 <span class="banner__slogan-text">Crafting Your Perfect Space</span>
-                                <button class="btn__shopnow">Shop now</button>
+                                <button class="btn__shopnow" onclick="ClickShopNow();">Shop now</button>
                             </div>
                             <img src="./assets/img/Rectangle.png" alt="Banner" class="banner__img"/>
                         </div>
@@ -141,7 +145,7 @@
                             <h3 class="product__special-heading">Special Product</h3>
                         </div>
                     </div>
-                    <div class="row">
+                    <div id="innerHtmlSpecial" class="row" runat="server">
                         <div class="col l-6 m-12 c-12">
                             <a href="#" class="product__special-item">
                                 <div class="product__special-mobile">
@@ -434,109 +438,9 @@
                 </div>
             </div>
         </footer>
-                <!--Modal layout-->
-    <div class="modal">
-        <div class="modal__overlay">
-
-        </div>
-        <div class="modal__body">
-                <!--Register form-->
-                <div class="auth-form-register">
-                    <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng ký</h3>
-                            <span class="auth-form__switch-btn">Đăng nhập</span>
-                  
-                        </div>
-                        <div class="auth-form__form">
-                            <div class="auth-form__group">
-                                    <input type="text" class="auth-form__input" placeholder="Nhập Email & số điện thoại"/>
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Mật khẩu"/>
-                            </div>    
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu"/>
-                            </div> 
-                        </div>
-    
-                        <div class="auth-form__aside">
-                            <p class="auth-form__polivy-text">
-                                Bằng việc đăng kí, bạn đã đồng ý với TN về
-                                <a href="#" class="auth-form__text-link">Điều khoản dịch vụ </a>&
-                                <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
-                            </p>
-                        </div>
-                        <div class="auth-form__controls">
-                            <button class="btn auth-form__controls-back btn--normal">Trở lại</button>
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
-                        </div>
-                    </div>
-                    <div class="auth-form__socials">
-                        <a href="#" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Facebook
-                            </span>
-                        </a>
-                        <a href="#" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-google"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Google
-                            </span>
-                        </a>
-                    </div>
-                </div>
-
-                <!--Login form-->
-                <div class="auth-form-login">
-                    <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng nhập</h3>
-                            <span class="auth-form__switch-btn registerForm">Đăng kí</span>
-                  
-                        </div>
-                        <div class="auth-form__form">
-                            <div class="auth-form__group">
-                                    <input type="text" class="auth-form__input" placeholder="Nhập Email"/>
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Mật khẩu"/>
-                            </div>    
-                        </div>
-    
-                        <div class="auth-form__aside">
-                            <div class="auth-form__help">
-                                <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
-                                <span class="auth-form__help-separate"></span>
-                                <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
-                            </div>
-                        </div>
-
-                        <div class="auth-form__controls">
-                            <button class="btn auth-form__controls-back">Trở lại</button>
-                            <button class="btn">ĐĂNG NHẬP</button>
-                        </div>
-                    </div>
-                    <div class="auth-form__socials">
-                        <a href="#" class="auth-form__socials--facebook btn">
-                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Facebook
-                            </span>
-                        </a>
-                        <a href="#" class="auth-form__socials--google btn">
-                            <i class="auth-form__socials-icon fab fa-google"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Google
-                            </span>
-                        </a>
-                    </div>
-                </div>
-        </div>
-    </div>
-    </div>
-    <script src="./assets/js/home.js"></script>
+            <script src="./assets/js/home.js"></script>
+      </div>
     </form>
+
 </body>
 </html>

@@ -11,61 +11,61 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class home
+    public partial class adminPage
     {
 
         /// <summary>
-        /// form1 control.
+        /// productTableBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productTableBody;
 
         /// <summary>
-        /// numberProduct control.
+        /// userTableBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl numberProduct;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl userTableBody;
 
         /// <summary>
-        /// userNameHomeLogin control.
+        /// lbFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl userNameHomeLogin;
+        protected global::System.Web.UI.WebControls.Label lbFullName;
 
         /// <summary>
-        /// spanLogin control.
+        /// lbNameRes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanLogin;
+        protected global::System.Web.UI.WebControls.Label lbNameRes;
 
         /// <summary>
-        /// spanRegister control.
+        /// lbPassWord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
+        protected global::System.Web.UI.WebControls.Label lbPassWord;
 
         /// <summary>
-        /// innerHtmlSpecial control.
+        /// lbConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl innerHtmlSpecial;
+        protected global::System.Web.UI.WebControls.Label lbConfirm;
     }
 }

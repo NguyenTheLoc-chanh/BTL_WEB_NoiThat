@@ -11,17 +11,8 @@ namespace BTL_WEB_NoiThat
 {
 
 
-    public partial class home
+    public partial class DetailOrder
     {
-
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// numberProduct control.
@@ -60,12 +51,12 @@ namespace BTL_WEB_NoiThat
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanRegister;
 
         /// <summary>
-        /// innerHtmlSpecial control.
+        /// list_info_order control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl innerHtmlSpecial;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_info_order;
     }
 }

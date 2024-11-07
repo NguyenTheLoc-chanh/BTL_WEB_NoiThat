@@ -141,6 +141,25 @@
 .header__navbar-user-name {
     margin-left: 4px;
     color: var(--text-color);
+    text-decoration: none;
+}
+.Logout {
+    position: absolute;
+    top: 58px;
+    right: 96px;
+    display: none;
+}
+
+.Logout::before {
+    position: absolute;
+    top: -16px;
+    content: "";
+    width: 70px;
+    height: 20px;
+}
+
+#userNameHomeLogin:hover .Logout {
+    display: block;
 }
 .header__navbar-user-name.login {
     position: relative;
@@ -153,7 +172,7 @@
             position: absolute;
             border-left: 1px solid var(--border-color);
             height: 12px;
-            right: -5px;
+            right: -14px;
             top: 50%;
             transform: translateY(-50%);
 }
@@ -437,6 +456,7 @@
 }
 
 .btn__addcart {
+    text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 16px;

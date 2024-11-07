@@ -1,20 +1,18 @@
 ﻿/*Authen Modal*/
-.modal {
+/* .modal{
     display: none;
 }
 
-    .modal.active,
-    .auth-form-register.active,
-    .auth-form-login.active {
-        display: block;
-        margin: auto;
-    }
-
+.modal.active,
+.auth-form-register.active,
+.auth-form-login.active{
+    display: block;
+    margin: auto;
+}
 .auth-form-register,
-.auth-form-login {
+.auth-form-login{
     display: none;
-}
-
+} */
 .auth-form-login,
 .auth-form-register {
     width: 500px;
@@ -22,6 +20,8 @@
     border-radius: 5px;
     overflow: hidden;
     z-index: 4;
+    margin: auto;
+    border: 1px solid #ccc;
 }
 
 .auth-form__container {
@@ -49,6 +49,7 @@
     color: var(--btn-color);
     font-weight: 400;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .auth-form__form {
@@ -63,17 +64,18 @@
     border-radius: 10px;
     border: 2px solid var(--border-color);
     outline: none;
+    margin-bottom: 4px;
 }
 
-.auth-form__input:focus {
-     border-color: #888;
-}
+    .auth-form__input:focus {
+        border-color: #888;
+    }
 
 .auth-form__aside {
     margin-top: 18px;
 }
 
-.auth-form__polivy-text{
+.auth-form__polivy-text {
     font-size: 12px;
     line-height: 18px;
     text-align: center;
@@ -147,4 +149,8 @@
 
 .auth-form__help-forgot {
     color: var(--btn-color);
+}
+
+.error{
+    color:red;
 }

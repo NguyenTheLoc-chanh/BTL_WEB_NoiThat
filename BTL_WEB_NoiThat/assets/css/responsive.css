@@ -1,5 +1,31 @@
 ﻿/* Mobile and Tablet */
-@media (max-width: 1023px) {
+@media (max-width: 1368px) {
+    .cart-info-heading {
+        font-size: 16px;
+    }
+
+    .content__cart-info {
+        margin-left: 8px;
+    }
+
+    .content__title-item-name {
+        margin-left: 0;
+    }
+
+    .content__title-item-price {
+        margin-left: 100px;
+        margin-right: 4px;
+    }
+
+    .content__title-list {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+    }
+
+    .cart-button {
+        margin-left: 0;
+    }
 }
 
 /*Tablet */
@@ -106,12 +132,30 @@
         margin-left: 12px;
         margin-right: 12px;
     }
+    /* Details */
+    .main-image {
+        width: 100%;
+    }
+
+    .order-button,
+    .cart-button {
+        width: 100%;
+    }
+    /* Shopping cart */
+    .content__title-item-price {
+        margin-right: 20px;
+    }
+
+    .back__pay {
+        margin-right: 480px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 739px) {
     .home {
-        width: 100%;
+        width: 100vw; /* Chiếm toàn bộ chiều rộng viewport */
+        height: 100vh;
     }
 
     .header {
@@ -138,15 +182,24 @@
     }
 
     .header__login-mobile {
+        display: block;
         margin-top: 25px;
-        margin-right: 200px;
+        margin-right: 150px;
         font-family: 'PT Sans';
         font-style: normal;
         font-size: 16px;
-        display: block;
+        text-decoration: none;
+        color: #333;
     }
 
-    .header__nav .header__nav-list {
+    /* .header__nav .header__nav-list{
+        display: none;
+    } */
+    .header__navbar-cart {
+        margin-right: 25px;
+    }
+
+    .header__navbar-item.header__navbar-user {
         display: none;
     }
 
@@ -157,7 +210,7 @@
         z-index: 1;
         position: absolute;
         top: 48px;
-        right: 8px;
+        right: 0px;
         background-color: #DED0B6;
         transform: translateX(100%); /* Đẩy danh sách ra ngoài khung nhìn */
         transition: transform ease-in 0.3s;
@@ -272,8 +325,7 @@
         background-position: center; /* Căn giữa ảnh */
         background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ phần tử */
         background-repeat: no-repeat; /* Không lặp lại ảnh */
-        background-color: #D9D9D9; /* Màu nền dự phòng */
-        background-image: url('your-image.jpg');
+        background: url('your-image.jpg') #D9D9D9; /* Đặt ảnh nền và màu nền */
     }
 
     .product__special-desc,
@@ -415,6 +467,10 @@
         flex-direction: column;
     }
 
+    .subproduct-heading {
+        font-size: 33px;
+    }
+
     .subnew-img {
         width: 100%;
         height: 170px;
@@ -429,7 +485,7 @@
     }
 
     #btnSubmit {
-        width: 100%;
+        width: 90%;
     }
 
     /* Footer */
@@ -457,4 +513,158 @@
         padding: 0;
         justify-content: space-around;
     }
+
+    /* Details */
+    .product-container {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 4px;
+    }
+
+    .product-details {
+        padding-left: 0;
+    }
+
+    .main-image {
+        width: 100%;
+    }
+
+    .order-button, .cart-button {
+        width: 100%;
+    }
+
+    .breadcrumb {
+        margin-left: 20px;
+    }
+    /* Shopping cart */
+    .info,
+    .info__input,
+    .btn_checkout {
+        width: 100%;
+    }
+
+    .info {
+        padding-right: 16px;
+    }
+
+    .content {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    /* .content__title-item-name{
+        margin-left: 0;
+    } */
+    .cart__remove {
+        width: 40px;
+        height: 40px;
+    }
+    /* .content__title-item-price{
+        margin-left: 100px;
+        margin-right: 4px;
+    }
+    .content__title-list {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+    } */
+    .back__pay {
+        margin-right: 0;
+    }
+
+    .back {
+        margin-left: 16px;
+    }
+
+    .pay {
+        margin-right: 16px;
+    }
+
+    /* Product */
+    .product {
+        margin: 0 8px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .card img {
+       width: 100%;
+    }
+
+    /* Mobile Category */
+    .mobile-category {
+        display: block;
+    }
+
+    .filter__search {
+        width: 100%;
+        margin: 8px 0px;
+    }
+    .mobile-category__list {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+        .mobile-category__list::-webkit-scrollbar {
+            display: none;
+        }
+
+    .mobile-category__item {
+        flex-shrink: 0;
+        /* Để quy định những đối tượng Flex item bị co nhỏ lại khi nằm chung trong 1 thẻ cha mà thẻ
+    cha lại bị giới hạn kích thước thì item sẽ tự động co lại- nếu để = 0 thì không tự động co lại */
+        margin-right: 10px;
+    }
+
+        .mobile-category__item:nth-last-of-type(3n) .mobile-category__link {
+            background-color: #87AFD8;
+        }
+
+        .mobile-category__item:nth-last-of-type(3n + 2) .mobile-category__link {
+            background-color: #76C9BD;
+        }
+
+        .mobile-category__item:nth-last-of-type(3n + 1) .mobile-category__link {
+            background-color: #88CF81;
+        }
+
+    .mobile-category__link {
+        --line-height: 26px;
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: var(--line-height);
+        height: calc(var(--line-height) * 2);
+        overflow: hidden;
+        text-align: center;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        width: 110px;
+        border-radius: 5px;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        padding: 6px 6px;
+        align-items: center;
+        justify-content: end;
+    }
+
+    /* Css cho layout 2 cột yêu cầu mobile 2 cột thì mở lên*/
+    /*.options-rating {
+        display: inline-block;
+    }
+
+    .rating {
+        margin-top: 8px;
+    }
+    */
 }
